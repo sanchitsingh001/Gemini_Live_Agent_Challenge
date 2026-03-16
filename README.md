@@ -16,7 +16,6 @@ This project is built for the **Gemini Live Agent Challenge – Creative Storyte
 - **Local setup & “hello world” run**
 - **Live game + NPC dialogue (local)**
 - **Cloud deployment & automation (Google Cloud)**
-- **Hackathon demo script (recommended flow)**
 - **Hackathon submission checklist**
 - **Advanced topics (assets & web hosting)**
 - **Environment variables**
@@ -57,9 +56,9 @@ At a high level, the system looks like this:
 - **GCS bucket**: Persistent storage for `output_jobs/<job_id>/` (narrative spec, game bundle, audio, web export).
 - **Firebase Hosting (optional)**: Global static hosting for the exported web games (one path per job).
 
-### Example hosted games (built from prompts)
+### Generated & deployed examples (built from prompts)
 
-These are example worlds already exported and hosted on Firebase from the pipeline. They are useful for judges to quickly understand the experience without waiting for a full pipeline run:
+These are fully generated worlds already exported and hosted on Firebase from the pipeline. They are useful for judges to quickly understand the experience without waiting for a full pipeline run:
 
 - **Ronin in the haunted mountain village**  
   Prompt:
