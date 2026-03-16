@@ -57,6 +57,26 @@ At a high level, the system looks like this:
 - **GCS bucket**: Persistent storage for `output_jobs/<job_id>/` (narrative spec, game bundle, audio, web export).
 - **Firebase Hosting (optional)**: Global static hosting for the exported web games (one path per job).
 
+### Example hosted games (built from prompts)
+
+These are example worlds already exported and hosted on Firebase from the pipeline. They are useful for judges to quickly understand the experience without waiting for a full pipeline run:
+
+- **Ronin in the haunted mountain village**  
+  Prompt:
+  > You are a wandering ronin who enters a silent ancient Japanese village at sunset, where uneasy villagers speak in hushed voices and refuse to look toward the mountain shrine.  
+  > As you move through the village and question each NPC, you hear of a missing priestess, ghostly footsteps in the bamboo forest, and a bell that rings each night for someone marked to disappear.  
+  > Following their clues, you make your way to the shrine as the fog grows thicker and the village behind you falls completely still.  
+  > There, beneath the bell, you find an old wooden tablet bearing your name—carved into it years before your birth.
+  - Hosted build: [`https://project-363d072c-3554-4f41-b1e.web.app/20260316_045951/`](https://project-363d072c-3554-4f41-b1e.web.app/20260316_045951/)
+
+- **Traveling merchant and the midnight bell**  
+  Prompt:
+  > You are a traveling merchant who arrives in a quiet 3D village at dusk, its streets strangely empty except for a few nervous villagers whispering about the old bell that rings at midnight with no one near it.  
+  > As you walk through the village and speak to each NPC, their stories clash—one saw a shadow in the forest, another claims the mayor vanished, and a child insists the well in the square is calling names in the dark.  
+  > Following their clues, you explore the village one last time until the bell tolls and every door suddenly swings open at once.  
+  > At the center of the square, you realize the villagers were never warning you about the mystery—you were the final piece of it.
+  - Hosted build: [`https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/`](https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/)
+
 See **[docs/GCP_DEPLOY.md](docs/GCP_DEPLOY.md)** and **[docs/CLOUD_WEB_HOSTING.md](docs/CLOUD_WEB_HOSTING.md)** for more detailed deployment diagrams and flows.
 
 ---
@@ -380,31 +400,6 @@ Use this as a quick checklist before you submit on Devpost:
 - **Demo video**
   - Follows (or is close to) the demo script above.
   - Clearly shows multimodal behavior (text + images + audio) and cloud deployment.
-
----
-
-## Example hosted games (built from prompts)
-
-These are example worlds already exported and hosted on Firebase from the pipeline. They are useful for judges to quickly understand the experience without waiting for a full pipeline run:
-
-- **Ronin in the haunted mountain village**  
-  Prompt:
-  > You are a wandering ronin who enters a silent ancient Japanese village at sunset, where uneasy villagers speak in hushed voices and refuse to look toward the mountain shrine.  
-  > As you move through the village and question each NPC, you hear of a missing priestess, ghostly footsteps in the bamboo forest, and a bell that rings each night for someone marked to disappear.  
-  > Following their clues, you make your way to the shrine as the fog grows thicker and the village behind you falls completely still.  
-  > There, beneath the bell, you find an old wooden tablet bearing your name—carved into it years before your birth.
-  - Hosted build: [`https://project-363d072c-3554-4f41-b1e.web.app/20260316_045951/`](https://project-363d072c-3554-4f41-b1e.web.app/20260316_045951/)
-
-- **Traveling merchant and the midnight bell**  
-  Prompt:
-  > You are a traveling merchant who arrives in a quiet 3D village at dusk, its streets strangely empty except for a few nervous villagers whispering about the old bell that rings at midnight with no one near it.  
-  > As you walk through the village and speak to each NPC, their stories clash—one saw a shadow in the forest, another claims the mayor vanished, and a child insists the well in the square is calling names in the dark.  
-  > Following their clues, you explore the village one last time until the bell tolls and every door suddenly swings open at once.  
-  > At the center of the square, you realize the villagers were never warning you about the mystery—you were the final piece of it.
-  - Hosted build: [`https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/`](https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/)
-
-
----
 
 ## Image & Asset workflows
 
