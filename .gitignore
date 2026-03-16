@@ -5,5 +5,37 @@ venv/
 firebase_hosting/
 27a83acb-1b95-4e95-9afa-09321c78bae3/
 Narrative_Engine.zip
-Narrative_Engine/output/*/export/web/*.pck
+
+# Python / build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Heavy / generated (regenerate locally)
+output/
+output_jobs/
+ec2_generated/
+asset_export_work/
+The_Legend_s_Choice/
+mesh_dir/
+godot_world/generated/
+godot_world/roads/
+
+# Node / client
+node_modules/
+game_client/build/
+
+# Logs & temp
+*.log
+*.tmp
+.cache/
+
+# Godot editor cache
+.godot/
 
