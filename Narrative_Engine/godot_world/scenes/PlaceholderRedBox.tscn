@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+albedo_color = Color(1, 0, 0, 1)
+roughness = 1.0
+metallic = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(1, 1, 1)
+material = SubResource("StandardMaterial3D_1")
+
+[node name="PlaceholderRedBox" type="Node3D"]
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_1")

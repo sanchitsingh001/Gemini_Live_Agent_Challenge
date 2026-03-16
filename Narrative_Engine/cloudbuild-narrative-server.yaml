@@ -1,0 +1,22 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-f'
+      - 'narrative_server/Dockerfile'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/narrative-repo/narrative-server'
+      - '.'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'narrative-server'
+      - '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/narrative-repo/narrative-server:latest'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+    id: 'deploy-narrative-server'
+images:
+  - 'us-central1-docker.pkg.dev/${PROJECT_ID}/narrative-repo/narrative-server'

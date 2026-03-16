@@ -1,0 +1,62 @@
+# --- Secrets & credentials (never commit) ---
+*.pem
+*.p12
+.env
+.env.*
+!.env.example
+*credentials*.json
+*service-account*.json
+*service_account*.json
+application_default_credentials.json
+client_secret*.json
+token.json
+token.pickle
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+.venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# --- IDE ---
+.cursor/
+.idea/
+*.swp
+*.swo
+
+# --- Heavy / generated (regenerate locally) ---
+output/
+outputs/
+ec2_generated/
+asset_export_work/
+The_Legend_s_Choice/
+mesh_dir/
+godot_world/generated/
+# Large mesh/binary road assets (~100MB+); clone README explains optional checkout
+godot_world/roads/
+
+# --- Node ---
+node_modules/
+game_client/build/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & temp ---
+*.log
+*.tmp
+.cache/
+
+# --- One-off local test assets ---
+000_Image_for_image_to_3D_3D_recon.*
+
+# Godot 4 editor cache (regenerated)
+.godot/

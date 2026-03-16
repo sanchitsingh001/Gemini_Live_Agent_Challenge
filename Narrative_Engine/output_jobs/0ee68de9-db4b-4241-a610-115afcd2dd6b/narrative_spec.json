@@ -1,0 +1,845 @@
+{
+  "meta": {
+    "genre": "mystery",
+    "tone": "tense",
+    "player_role": "investigator",
+    "one_sentence_premise": "On a fog-drenched evening, a stranger arrives in the isolated town of Black Hollow. The streets are empty, doors are bar...",
+    "intro_premise": "On a fog-drenched evening, a stranger arrives in the isolated town of Black Hollow. The streets are empty, doors are barred, and candles burn late behind shuttered windows. Everywhere they go, people whisper about a ghostly figure that appears at the edge of town each night, staring silently toward the crumbling church on the hill. As the stranger searches for answers, they uncover fragments of a long-buried secret binding the town to the restless spirit\u2014one that can only be resolved before...",
+    "visual_setting_lock": "**Setting + Player Role**\n- **Setting:** Black Hollow, a remote 19th-century New England salt harvesting town. The geography is a low, foggy coastline. The architecture is weathered, unpainted clapboard and saltbox houses with stone foundations, built to withstand harsh sea winds.\n- **Player Role:** An itinerant cartographer, arriving on foot to chart the coastline, an outsider with a logical reason to be asking questions and exploring the town's layout.\n\n**Outdoor Anchors (7)**\n1.  **Town Well:** A wide, moss-slicked stone well at the town's central crossroads.\n2.  **Founder's Statue:** A verdigris-streaked bronze statue of the town's founder, Minister Davies, holding a book. One hand is broken off.\n3.  **Salt-Evaporation Vats:** A series of large, shallow, stone-lined pits used for extracting salt from seawater. Currently unused and holding stagnant rainwater.\n4.  **Shipwright's Shed:** A large, windowless shed made of heavy, tarred timbers, where hulls are repaired. No entry.\n5.  **Cemetery Gate:** A simple, wrought-iron gate leading to the town cemetery, flanked by a low stone wall.\n6.  **Crumbling Church Foundation:** The exposed stone footprint and a few collapsed walls of a church on a low hill, overgrown with weeds.\n7.  **Lighthouse Base:** The thick, stone-and-brick cylindrical base of a decommissioned lighthouse on a small, rocky rise at the town's edge.\n\n**NPCs (6) & Situations**\n1.  **Elder Maeve** (at the **Town Well**): The town's self-appointed historian.\n    -   **Ch 1 (Testing):** Offers cryptic, folkloric warnings about the \"Hollow's Gloom\" to gauge the player's gullibility.\n    -   **Ch 2 (Misdirecting):** Blames the spirit on an old shipwreck tragedy to steer the player away from the church's history.\n    -   **Ch 3 (Protecting Someone):** Protects the town's founding myth and her own family's complicity in the original sin.\n\n2.  **Silas the Shipwright** (at the **Shipwright's Shed**): A pragmatic man whose family has been here for generations.\n    -   **Ch 1 (Concealing):** Brusquely dismisses the ghost as \"fog-madness\" and tells the player to mind their own business, hiding his deep-seated fear.\n    -   **Ch 2 (Buying Time):** Admits the \"f",
+    "experience": {
+      "opening_image_path": "opening.png",
+      "first_objective_npc_id": "thomas_the_keeper",
+      "first_objective_text": "Speak with thomas_the_keeper \u2014 they may know how to begin.",
+      "setup_screen_path": "setup_screen.png",
+      "ending_screen_path": "ending_screen.png"
+    },
+    "title": "On a fog-drenched evening, a stranger arrives in the isolated town of Black Holl",
+    "narrator_setup": "**narrator_setup**\nYou arrive in Black Hollow as an itinerant cartographer, tasked with charting the coastline. But the town is wrapped in a suffocating fog and a fear just as thick. Your professional survey is immediately overshadowed by a silent, shared dread that demands investigation.\n\n**NPCs (6) & Situations**\n1.  **Elder Maeve** (at the **Town Well**): The town's self-appointed historian.\n  ",
+    "atmosphere": {
+      "time_of_day": 20.5,
+      "fog_intensity": 0.8
+    }
+  },
+  "anchors": [
+    {
+      "id": "town_well",
+      "label": "Town Well",
+      "type": "Stone Well",
+      "description": "A wide, moss-slicked stone well at what passes for the town's central crossroads. The stonework is old and sturdy.",
+      "placement_notes": "Place at a central intersection. It should occupy a 2x2 grid area and be a key landmark in the town layout."
+    },
+    {
+      "id": "founders_statue",
+      "label": "Founder's Statue",
+      "type": "Bronze Statue",
+      "description": "A verdigris-streaked bronze statue of Minister Davies holding a book. One of his hands, outstretched, is broken off at the wrist.",
+      "placement_notes": "Place in a small, clear area, like a tiny town square. The statue and its stone plinth should occupy a 1x1 or 2x2 grid space on flat ground."
+    },
+    {
+      "id": "salt_evaporation_vats",
+      "label": "Salt-Evaporation Vats",
+      "type": "Stone Vats",
+      "description": "A series of large, shallow, stone-lined pits. Once used for extracting salt, they now hold only stagnant, brackish rainwater.",
+      "placement_notes": "Place on the edge of town. This is a large anchor, occupying a 4x4 grid area of shallow, distinct pits on flat ground."
+    },
+    {
+      "id": "shipwrights_shed",
+      "label": "Shipwright's Shed",
+      "type": "Wooden Shed",
+      "description": "A large, windowless shed made of heavy, tarred timbers where ship hulls are repaired. The main door is inaccessible.",
+      "placement_notes": "Place near the edge of the map. It is a large building, occupying a 3x5 grid area. Set it back slightly from a main path."
+    },
+    {
+      "id": "cemetery_gate",
+      "label": "Cemetery Gate",
+      "type": "Iron Gate",
+      "description": "A simple, wrought-iron gate flanked by a low stone wall. The gate marks the entrance to the town's small, windswept cemetery.",
+      "placement_notes": "Place at the edge of the town map, with the low stone wall extending a few grid cells to either side. The gate itself occupies a 1x1 grid cell."
+    },
+    {
+      "id": "crumbling_church_foundation",
+      "label": "Crumbling Church Foundation",
+      "type": "Stone Foundation",
+      "description": "The exposed stone footprint and a few collapsed walls of a church, now overgrown with weeds and creeping ivy.",
+      "placement_notes": "Place on a distinct, open area of the map to suggest prominence. This anchor is a large footprint of ruined walls, occupying a 4x6 grid area."
+    },
+    {
+      "id": "lighthouse_base",
+      "label": "Lighthouse Base",
+      "type": "Stone Lighthouse Base",
+      "description": "The thick, stone-and-brick cylindrical base of a decommissioned lighthouse. It stands at the town's desolate, windswept edge.",
+      "placement_notes": "Place at a corner of the map to signify the edge of town. It's a solid, circular structure occupying a 3x3 grid area on flat ground."
+    }
+  ],
+  "clues": [
+    {
+      "id": "church_and_sin",
+      "label": "The Church's Purpose",
+      "anchor_id": "town_well",
+      "interaction": "Maeve shares a piece of 'official' folklore, testing your reaction.",
+      "description": "Minister Davies built his church on that hill to consecrate the ground, to wash away a great sin that once stained this town.",
+      "what_it_implies": "The land where the church was built has a dark or contested history, predating the church itself.",
+      "key_for_progress": false
+    },
+    {
+      "id": "vats_are_abandoned",
+      "label": "The Abandoned Vats",
+      "anchor_id": "shipwrights_shed",
+      "interaction": "Silas makes a brusque, pragmatic observation about the town's primary industry.",
+      "description": "This town was built on salt. Now look at those vats... full of rainwater. No one's harvested salt in my lifetime. We just... exist here.",
+      "what_it_implies": "The town's original economic purpose has collapsed, suggesting a foundational problem or historical turning point.",
+      "key_for_progress": false
+    },
+    {
+      "id": "figure_is_solid",
+      "label": "The Solid Figure",
+      "anchor_id": "lighthouse_base",
+      "interaction": "Thomas reluctantly shares a direct observation, contradicting the local ghost story.",
+      "description": "They call it a ghost, but ghosts are mist. This... figure... it's solid. When it stands there, it blocks the light from the town below.",
+      "what_it_implies": "The 'ghost' is not a supernatural entity but a living, physical person.",
+      "key_for_progress": true
+    },
+    {
+      "id": "statue_held_scroll",
+      "label": "The Statue's Scroll",
+      "anchor_id": "salt_evaporation_vats",
+      "interaction": "Finn cynically points out a detail about the Founder's Statue that others ignore or have forgotten.",
+      "description": "Everyone sees the good Minister with his book. But old-timers know it wasn't a book. It was a scroll he held, before the hand 'broke'.",
+      "what_it_implies": "The statue was altered. A scroll suggests a legal document (like a deed), not scripture, changing the founder's narrative.",
+      "key_for_progress": false
+    },
+    {
+      "id": "church_is_new",
+      "label": "The Church's Age",
+      "anchor_id": "shipwrights_shed",
+      "interaction": "As a builder, Silas notes a discrepancy in the town's construction history.",
+      "description": "That church wasn't part of the original town. The stonework is newer than my family's shed. Davies built it after he was already established here.",
+      "what_it_implies": "The church was not a founding pillar of the community but was built later for a specific, perhaps ulterior, purpose.",
+      "key_for_progress": false
+    },
+    {
+      "id": "righteous_claim_cormac",
+      "label": "The Righteous Claim",
+      "anchor_id": "crumbling_church_foundation",
+      "interaction": "Elara defensively quotes from her ancestor's journal to justify his actions.",
+      "description": "My ancestor's journal speaks of his struggle. He mentions making a 'righteous claim' over what he called the 'Cormac folly'.",
+      "what_it_implies": "Minister Davies took the land from a specific family named Cormac, introducing the central conflict.",
+      "key_for_progress": true
+    },
+    {
+      "id": "cormacs_were_salt_harvesters",
+      "label": "The Original Harvesters",
+      "anchor_id": "salt_evaporation_vats",
+      "interaction": "Finn reveals his family's connection to the town's hidden history.",
+      "description": "These vats? They weren't Davies' idea. They belonged to the Cormacs. My great-grandfather worked their salt fields before they were... removed.",
+      "what_it_implies": "The town's main industry and the land it's on were originally owned by the Cormac family.",
+      "key_for_progress": false
+    },
+    {
+      "id": "cormacs_driven_out",
+      "label": "The Official Story",
+      "anchor_id": "town_well",
+      "interaction": "Maeve explains the 'official' reason for the Cormac family's disappearance, attempting to misdirect you.",
+      "description": "The Cormacs? A blasphemous lot. Minister Davies had them driven out for their sins. Their name was stricken from the town records.",
+      "what_it_implies": "There was an official, sanctioned cover-up of the Cormac family's existence and removal.",
+      "key_for_progress": false
+    },
+    {
+      "id": "deed_mentions_cormac",
+      "label": "The Shipwright's Deed",
+      "anchor_id": "shipwrights_shed",
+      "interaction": "Fearing for his own claim, Silas reveals a detail from his family's old land deed.",
+      "description": "My family's deed for this shed... it's old. It marks the boundary line with the 'former Cormac property.' The name is right there on the paper.",
+      "what_it_implies": "A legal document exists that proves the Cormacs owned land, contradicting the story that they were erased from history.",
+      "key_for_progress": true
+    },
+    {
+      "id": "figure_studies_statue",
+      "label": "The Figure's Gaze",
+      "anchor_id": "lighthouse_base",
+      "interaction": "Thomas shares another spyglass observation, connecting the figure to the town's central monument.",
+      "description": "From up here, with my glass... I've seen the figure at the Founder's Statue. It's not praying. It's studying it. Tracing the broken hand with its eyes.",
+      "what_it_implies": "The figure is looking for something specific related to the statue's broken hand, likely the missing scroll.",
+      "key_for_progress": false
+    },
+    {
+      "id": "founder_smashed_statue",
+      "label": "The Founder's Rage",
+      "anchor_id": "crumbling_church_foundation",
+      "interaction": "Under pressure, Elara makes a desperate confession from her ancestor's private journal.",
+      "description": "The 'righteous claim' was a seizure! The journal says the hand on the statue broke when he smashed it in a rage... after the original deed was stolen back from him.",
+      "what_it_implies": "The founder was a criminal, and the broken statue is a monument to his crime and failure, not an accident of time.",
+      "key_for_progress": true
+    },
+    {
+      "id": "cormac_deed_revealed",
+      "label": "The Cormac Deed",
+      "anchor_id": "founders_statue",
+      "interaction": "Having heard the truth, the figure finally speaks and reveals the ultimate proof.",
+      "description": "My name is Lydia Cormac. My family never left. We just waited. Minister Davies stole our land, but my ancestor stole this back.",
+      "what_it_implies": "The 'ghost' is the rightful heir, and she holds the very legal document that proves her family's ownership of the land.",
+      "key_for_progress": true
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "title": "The Shroud",
+      "narration": "You arrive in Black Hollow on foot, a place that seems to be actively sinking into the fog-choked salt marsh. The air is thick with brine and silence. At the town's center, a figure stands motionless before a broken statue, an anomaly the townsfolk refuse to properly acknowledge. They speak of 'fog-madness' and old curses, their eyes darting away from yours, and from the silent watcher.",
+      "event_beats": [
+        "The shipwright, Silas, aggressively dismisses your questions about the figure.",
+        "Elder Maeve speaks in riddles about a 'great sin' cleansed by the church.",
+        "The lighthouse keeper, Thomas, seems terrified to even be seen talking to you.",
+        "Elara, tending the ruined church foundation, claims the figure is a divine judgment.",
+        "The figure at the statue remains perfectly still, a silent accusation in the gloom."
+      ],
+      "spotlight_npc_ids": [
+        "thomas_the_keeper",
+        "elder_maeve"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "founders_statue",
+        "salt_evaporation_vats",
+        "shipwrights_shed",
+        "cemetery_gate",
+        "crumbling_church_foundation",
+        "lighthouse_base"
+      ],
+      "available_clue_ids": [
+        "figure_is_solid",
+        "church_and_sin"
+      ],
+      "entry_require_all_clues": [],
+      "entry_require_any_clues": [],
+      "exit_require_all_clues": [
+        "figure_is_solid",
+        "church_and_sin"
+      ],
+      "transition_player_hook": "The Founder's Statue is draped in a black shroud, an act of sacrilege. Thomas, the stonemason\u2019s son, looks terrified, while Elder Maeve appears grimly resigned. You must confront them both; their fear and secrets are the only keys to understanding who did this, and why."
+    },
+    {
+      "id": "chapter_2",
+      "title": "The Cracks",
+      "narration": "The story of a local ghost is fraying. You know the figure is real, and that the town's founding is tied to a dark secret. Now, a name\u2014Cormac\u2014surfaces in conversation like a drowned thing, only to be shoved back under. The townsfolk's masks of dismissal are cracking, revealing fear and long-held deceptions.",
+      "event_beats": [
+        "Finn, a bitter man at the abandoned salt vats, hints the founder's statue is a lie.",
+        "An old property deed mentions the 'Cormac' name, a name no one will explain.",
+        "Maeve's warnings shift from folklore to pointed remarks about 'blasphemers' driven from the town.",
+        "The timeline of the church's construction doesn't seem to fit the town's official history.",
+        "Contradictions pile up, suggesting the town's entire founding myth is built on a falsehood."
+      ],
+      "spotlight_npc_ids": [
+        "silas_the_shipwright",
+        "finn"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "founders_statue",
+        "salt_evaporation_vats",
+        "shipwrights_shed",
+        "cemetery_gate",
+        "crumbling_church_foundation",
+        "lighthouse_base"
+      ],
+      "available_clue_ids": [
+        "deed_mentions_cormac",
+        "cormacs_were_salt_harvesters"
+      ],
+      "entry_require_all_clues": [
+        "figure_is_solid",
+        "church_and_sin"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "deed_mentions_cormac",
+        "cormacs_were_salt_harvesters"
+      ],
+      "transition_player_hook": "A solid ghost, a sin buried under the church... and now, the ground itself is cracking. They say only two men would notice: Silas, the stonemason, and Finn, who remembers what this town was *before* the sin. Their stories are where you go next."
+    },
+    {
+      "id": "chapter_3",
+      "title": "The Reckoning",
+      "narration": "The air is no longer just foggy; it's electric with tension. Every conversation is a confrontation. You are no longer just a cartographer; you are an arbiter of a history this town has tried to bury for a century. The truth is within your grasp, held by a desperate descendant and the silent figure who has been waiting for someone to finally ask the right questions.",
+      "event_beats": [
+        "Elara's defense of her ancestor crumbles into a confession of violent rage and theft.",
+        "Silas and Maeve become desperate, their family legacies and property tied to the original crime.",
+        "Finn watches with grim satisfaction as the founder's sainted legacy unravels.",
+        "The figure at the statue finally turns to face you, ready to speak her name.",
+        "The town's curse is not supernatural, but the crushing weight of their shared, inherited guilt."
+      ],
+      "spotlight_npc_ids": [
+        "elara",
+        "lydia_the_figure"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "founders_statue",
+        "salt_evaporation_vats",
+        "shipwrights_shed",
+        "cemetery_gate",
+        "crumbling_church_foundation",
+        "lighthouse_base"
+      ],
+      "available_clue_ids": [
+        "founder_smashed_statue",
+        "cormac_deed_revealed"
+      ],
+      "entry_require_all_clues": [
+        "deed_mentions_cormac",
+        "cormacs_were_salt_harvesters"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "founder_smashed_statue",
+        "cormac_deed_revealed"
+      ],
+      "transition_player_hook": "The name Cormac is a ghost on the deed and a whisper by the salt vats\u2014a family \u201cremoved.\u201d This name is now your weapon. Elara guards the town\u2019s memories; Lydia guards its secrets. One of them knows what that removal truly meant. Confront them."
+    }
+  ],
+  "npcs": [
+    {
+      "id": "elder_maeve",
+      "name": "Elder Maeve",
+      "role": "Town's self-appointed historian and matriarch",
+      "anchor_id": "town_well",
+      "pose": "standing",
+      "vibe": "An old woman with a sharp gaze, wrapped in heavy woolen shawls despite the damp air. She leans on a gnarled driftwood cane, watching all who approach the well.",
+      "public_face": "Offers cryptic, folkloric warnings about the 'Hollow's Gloom' and the town's many tragedies, positioning herself as a keeper of old tales.",
+      "private_truth": "She knows the 'curse' is rooted in a land dispute, not folklore. Her family was complicit in helping Minister Davies frame the Cormacs and has benefited from it for generations.",
+      "protected_truth": "Her own family's direct involvement in the original sin\u2014the framing of the Cormacs to steal their land. She protects the founding myth to protect her family's standing and property.",
+      "misleading_claim": "The figure is the spirit of a sailor lost in the great shipwreck of '48. It seeks its final rest, but the sea holds its grudges.",
+      "voice_style": "Winding, folkloric. Speaks in metaphors and local sayings. Becomes clipped and defensive when her stories are questioned.",
+      "lie_style": "Misdirection through folklore. Buries the truth under layers of unrelated, spooky stories to make the core issue seem like just another local legend.",
+      "pressure_points": "Questioning the official history of the town's founding, suggesting Minister Davies was anything but a saint, mentioning the Cormac family name.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Acts as the cryptic keeper of local lore, framing the town's troubles in supernatural, folkloric terms.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To steer the player toward a ghost story and away from the town's criminal history.",
+          "how_they_treat_player": "With condescending wisdom, as if educating a naive outsider on the dangers of the local 'gloom'.",
+          "what_they_offer": "Vague, poetic warnings and folklore about a 'great sin' and sea spirits. She offers the 'church_and_sin' clue, but frames it as a spiritual event.",
+          "what_they_refuse": "To speak plainly about history, the figure, or the sin. She dismisses direct questions with more riddles.",
+          "reacts_to_clues_any": [
+            "figure_is_solid"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Another soul drawn to the well. Be wary of what you draw up from the Hollow's depths, stranger.",
+            "evasive": "History is like the fog; it shifts and hides things. You can't just grab hold of it.",
+            "pressured": "Some sins are best left as warnings, not histories. The church brought peace, and that is what matters.",
+            "reveal": "This town was founded on penance. The church was built to cleanse a great sin that had stained the very salt in the air."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Becomes a defensive guardian of the 'official' history, shifting from folklore to character assassination.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To discredit the Cormac name and justify their expulsion from the town, protecting the founding families' reputation.",
+          "how_they_treat_player": "With growing suspicion and hostility. The player is no longer a curious traveler but a meddlesome threat.",
+          "what_they_offer": "A revised history where the Cormacs were 'blasphemers' who deserved their fate. She offers the 'cormacs_driven_out' clue as a justification.",
+          "what_they_refuse": "To acknowledge the Cormacs' legitimate claim to the land or the salt vats. She will call the deed a forgery or a misunderstanding.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "deed_mentions_cormac",
+            "cormacs_were_salt_harvesters"
+          ],
+          "sample_lines": {
+            "greeting": "You've been stirring the mud at the bottom of the well. Some things down there should stay buried.",
+            "evasive": "That is a name of heresy. They turned their back on this town and its grace. We don't speak of them.",
+            "pressured": "You wave that paper and think you know the truth? That family was poison! They held this town back with their bitterness!",
+            "reveal": "They were driven out for their blasphemy! They refused to accept the new church and clung to their worthless salt flats like dragons."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "A cornered matriarch whose lies have unraveled, now fighting bitterly to protect her family's legacy and property.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must present the 'cormac_deed_revealed' clue, forcing her to confront undeniable proof of the theft.",
+          "goal": "To justify her ancestors' actions as necessary for the town's survival and protect her family's current standing.",
+          "how_they_treat_player": "As a hostile judge and jury. She is accusatory and vitriolic, trying to guilt the player for destroying the town's 'peace'.",
+          "what_they_offer": "Bitter justifications and attempts to frame the crime as a necessary sacrifice for the greater good. No more stories, only raw defense.",
+          "what_they_refuse": "To show remorse or admit her family did anything wrong. She will never concede the moral high ground.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "cormac_deed_revealed"
+          ],
+          "sample_lines": {
+            "greeting": "So, the outsider comes to pass judgment. Have you come to tear down everything our families built?",
+            "evasive": "You don't understand sacrifice! You see a piece of paper, we see a century of survival!",
+            "pressured": "That land was dying! The Cormacs were letting it rot in the marsh! My family helped build this town from their waste!",
+            "reveal": "Fine! Yes! My grandfather stood with the Minister. He helped write the new deed. It was for the good of the town! We made this place! You have no right!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "silas_the_shipwright",
+      "name": "Silas",
+      "role": "Pragmatic shipwright from a founding family",
+      "anchor_id": "shipwrights_shed",
+      "pose": "standing",
+      "vibe": "A broad-shouldered man with a weathered face and hands stained with tar. He smells of pine pitch and salt, and regards strangers with suspicion.",
+      "public_face": "Dismisses all talk of ghosts as 'fog-madness' or foolishness. He's a practical man with no time for superstition and wants outsiders to mind their business.",
+      "private_truth": "He knows the town's property lines are based on the fraudulent seizure of the Cormac land. His own family's deed explicitly borders the 'former Cormac property.' He's terrified this truth will invalidate his claim.",
+      "protected_truth": "The existence of his family's deed, which names the Cormac property, proving the Cormacs existed and owned valuable land that was stolen.",
+      "misleading_claim": "It's just some vagrant come down from the city, drawn by the quiet. Happens every few years. They'll move on when the weather turns.",
+      "voice_style": "Short, concrete, and brusque. Avoids speculation. Answers questions with his own questions to deflect.",
+      "lie_style": "Stonewalling and dismissal. Flatly denies anything unusual is happening, treating the player's questions as a waste of his valuable time.",
+      "pressure_points": "Insisting the figure is real, asking about old property lines or land deeds, suggesting the town's history isn't as simple as it seems.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Dismisses the player's concerns about the figure as foolishness, actively trying to make the player leave town.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To get the player to leave by framing the central mystery as a mundane, non-event ('fog-madness' or a vagrant).",
+          "how_they_treat_player": "With brusque impatience, treating the player as a city-dweller wasting his valuable time with silly questions about ghosts.",
+          "what_they_offer": "A simple, dismissive explanation for the figure. He reinforces the idea that outsiders should mind their own business.",
+          "what_they_refuse": "To engage in any speculation, acknowledge the figure is significant, or discuss town history in any capacity.",
+          "reacts_to_clues_any": [
+            "figure_is_solid",
+            "church_and_sin"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Can't you see I'm working? What do you want?",
+            "evasive": "Figure? You mean the vagrant? They'll move on. They always do. Now, are you buying lumber or wasting air?",
+            "pressured": "Listen, I build boats. Solid things. I don't have time for ghost stories or whatever nonsense Maeve is spinning.",
+            "reveal": "It's just some vagrant come down from the city. Happens every few years. They'll move on when the weather turns."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "His pragmatic stonewalling becomes more rigid and defensive as the player's questions get closer to the truth about property.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To shut down any line of questioning about the 'Cormac' name or old land deeds before it threatens his family's claim.",
+          "how_they_treat_player": "His suspicion hardens into veiled hostility. He now sees the player as a direct threat to his security and livelihood.",
+          "what_they_offer": "Nothing but resistance and deflections. He might offer a vague warning about meddling in things that are not your concern.",
+          "what_they_refuse": "To define the name 'Cormac,' discuss property lines, or admit any controversy exists in the town's history.",
+          "reacts_to_clues_any": [
+            "deed_mentions_cormac",
+            "cormacs_were_salt_harvesters"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You again. I told you, I'm busy.",
+            "evasive": "Cormac? Never heard of 'em. People come and go. You're reading too much into old paper.",
+            "pressured": "Why are you so interested in my family's land? You a surveyor? Or just a ghoul digging up graves that don't exist?",
+            "reveal": "There were no salt-harvesters here but the founders. It's in the town charter. End of story."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Cornered by the truth, his pragmatism shatters, revealing the deep-seated fear of losing his family's legacy and property.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must confront him with the full truth of the Cormac's stolen deed, forcing him to admit his own complicity.",
+          "goal": "To make one last, desperate denial, then to minimize his family's culpability when the truth is undeniable.",
+          "how_they_treat_player": "With raw, desperate anger. He is no longer hiding behind a mask; he is a cornered man lashing out in fear.",
+          "what_they_offer": "A final, angry denial, which crumbles into a resentful confession when presented with irrefutable proof.",
+          "what_they_refuse": "To accept blame willingly. He will frame his family as passive inheritors of the situation, not active participants in the crime.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "cormac_deed_revealed"
+          ],
+          "sample_lines": {
+            "greeting": "What is it now? Have you come to take my land? To tear down everything my family built?",
+            "evasive": "That's Elara's family business, not mine! My grandfather just built on the land he was given!",
+            "pressured": "You think I wanted this? It's just a line on a map! A name on a paper! It shouldn't matter after a hundred years!",
+            "reveal": "Alright! Fine! The deed mentions them. It borders 'former Cormac property.' My father showed it to me once. He said to never speak of it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "thomas_the_keeper",
+      "name": "Thomas",
+      "role": "Reclusive former lighthouse keeper",
+      "anchor_id": "lighthouse_base",
+      "pose": "standing",
+      "vibe": "A gaunt, nervous man with a far-seeing gaze, constantly scanning the horizon. He wears old, patched keeper's woolens and squints as if into a bright light.",
+      "public_face": "A frightened recluse who claims to see nothing and know nothing. He is terrified of drawing the attention of the other townsfolk or the mysterious figure.",
+      "private_truth": "From his vantage point, he has observed the figure for weeks. He knows it's a solid person, not a ghost, and has seen it studying the Founder's Statue.",
+      "protected_truth": "That he saw the figure up close with his spyglass and knows it's a living person. Admitting this would make him a key witness, a role he desperately wants to avoid.",
+      "misleading_claim": "I keep my eyes on the sea. The goings-on in town are not my concern. I see nothing but fog and water.",
+      "voice_style": "Hesitant and quiet. Speaks in short, observational fragments. Evasive and looks for an escape from the conversation.",
+      "lie_style": "Feigned ignorance and avoidance. He lies by omission, claiming not to have seen things he clearly has, hoping the player will give up and leave him alone.",
+      "pressure_points": "Appealing to his conscience, pointing out inconsistencies in others' stories, offering to act as an intermediary so he doesn't have to get directly involved.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Terrified and evasive, he sticks to his claim of seeing nothing to avoid any involvement with the player or the town's secrets.",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "To make the player go away and believe he is just a simple, unobservant recluse with no information to offer.",
+          "how_they_treat_player": "With visible fear and anxiety. He avoids eye contact, speaks in short sentences, and tries to end the conversation quickly.",
+          "what_they_offer": "An unintentional slip that the figure is a solid person, not a ghost, which he immediately regrets saying. This reveals the 'figure_is_solid' clue.",
+          "what_they_refuse": "To acknowledge the figure directly, to discuss the town's affairs, or to admit he watches anything other than the sea.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The fog... it plays tricks. Best not to stare too long into it.",
+            "evasive": "I watch the water, not the land. Town business isn't my business.",
+            "pressured": "Look, I don't know about curses. But... that's no wisp of smoke out there. It has... weight. That's all. Please go.",
+            "reveal": "It stands too still. Fog doesn't do that. It's solid. Now, I've said too much. I have to watch the tide."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Wary but calculating, he weighs the danger of silence against the risk of trusting the player with more information.",
+          "tension_state": "Negotiating",
+          "reveal_cost": "Player must gain his trust by showing they know about the deeper conspiracy and promise to keep his name out of it.",
+          "goal": "To get a guarantee of anonymity and safety from the player in exchange for a piece of corroborating information.",
+          "how_they_treat_player": "Less dismissive, more appraising. He listens more carefully, trying to gauge the player's knowledge and intent before speaking.",
+          "what_they_offer": "The crucial observation that the figure isn't just present, but is actively and repeatedly studying the Founder's Statue.",
+          "what_they_refuse": "To admit he used his spyglass or knows any specific details about the figure. He refuses to discuss the Cormac name.",
+          "reacts_to_clues_any": [
+            "deed_mentions_cormac",
+            "cormacs_were_salt_harvesters"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You're still here. Stirring things up.",
+            "evasive": "Names on old paper... that's a kind of trouble I've spent my life avoiding. You should too.",
+            "pressured": "If I tell you something... you swear you'll keep me out of it? This isn't a game. People here... they protect their secrets.",
+            "reveal": "It's the statue. The figure... it's always looking at the statue. Specifically the base. Like it's reading something that isn't there."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Panicked and cornered, he sees the town's social order collapsing and fears he'll be a target for the powerful families.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must leverage the imminent danger from other NPCs and offer credible protection, forcing his hand.",
+          "goal": "To secure his own survival by giving the player his final, most damning piece of evidence in exchange for protection.",
+          "how_they_treat_player": "As his only potential lifeline. He is frantic, pleading, and no longer trying to hide his terror.",
+          "what_they_offer": "His protected truth: he used a spyglass to get a clear look at the figure, confirming it is a living woman and not a spirit.",
+          "what_they_refuse": "To come forward publicly or confront anyone directly. His information is for the player alone, as a final plea for safety.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "founder_smashed_statue",
+            "cormac_deed_revealed"
+          ],
+          "sample_lines": {
+            "greeting": "They're watching the lighthouse. They know you've been here. You've put me in danger.",
+            "evasive": "Go away! It's over. You've won. Just leave me out of the wreckage.",
+            "pressured": "You don't get it! When their story falls apart, they'll need someone to blame! The man who watches everything!",
+            "reveal": "Damn it, fine! I have a glass. For ships. I saw her face. It's a woman. Young. Just... waiting. Now get me out of here. Please."
+          }
+        }
+      ]
+    },
+    {
+      "id": "elara",
+      "name": "Elara",
+      "role": "Descendant of the town's founder, Minister Davies",
+      "anchor_id": "crumbling_church_foundation",
+      "pose": "standing",
+      "vibe": "A woman dressed in severe, old-fashioned black. She carries herself with a rigid piety, but her eyes are filled with a frantic, defensive energy.",
+      "public_face": "Portrays the figure as a divine judgment upon the town for abandoning her ancestor's church and legacy. She is the guardian of her family's saintly reputation.",
+      "private_truth": "She knows from her ancestor's journal that he seized the land from the Cormac family through a 'righteous claim.' She knows the family legacy is built on a lie.",
+      "protected_truth": "The contents of her ancestor's journal, specifically the mention of the 'Cormac folly' and the 'righteous claim,' which is a euphemism for theft.",
+      "misleading_claim": "This apparition is a holy sign, a warning to this faithless town for letting my ancestor's house of God fall to ruin. We must pray for forgiveness.",
+      "voice_style": "Declarative and formal. Tends toward sermons. Becomes shrill and desperate when her ancestor's sainthood is challenged.",
+      "lie_style": "Pious misdirection. Reframes the player's questions in religious terms, accusing them of blasphemy or faithlessness for doubting the saintliness of her ancestor.",
+      "pressure_points": "Questioning Minister Davies's motives, presenting evidence that contradicts the 'saintly founder' narrative, mentioning the Cormac name.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Stands as a self-appointed moral authority, using piety as a shield against uncomfortable questions.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To frame the mysterious figure as a divine warning, thereby controlling the narrative and reinforcing her ancestor's saintly legacy.",
+          "how_they_treat_player": "Condescendingly, as a spiritually lost newcomer who needs to be guided away from secular questions and toward prayer and repentance.",
+          "what_they_offer": "A false, religious explanation for the events. She will offer the clue 'church_and_sin' but frame it as the town's sin of abandoning her ancestor's church.",
+          "what_they_refuse": "To discuss the town's history, the figure as a physical person, or any topic that cannot be twisted into a sermon.",
+          "reacts_to_clues_any": [
+            "figure_is_solid"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Another soul wandering in the fog. Are you here to pray for this town's redemption?",
+            "evasive": "You speak of flesh and bone, but this is a matter of the spirit. A warning to the faithless.",
+            "pressured": "Your questions border on blasphemy. The Minister's work was holy. Do not test the patience of the devout.",
+            "reveal": "The truth is this: the town abandoned God, and this is His reply. We must repent for letting this holy ground fall to ruin."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Her piety becomes a brittle, defensive shell. She is visibly agitated by historical questions, especially about specific names.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To aggressively discredit the Cormac name and shut down any line of inquiry that threatens her ancestor's reputation.",
+          "how_they_treat_player": "With growing hostility and suspicion, viewing them as a malicious force intent on desecrating her family's name.",
+          "what_they_offer": "A revised, slanderous history where the Cormacs were heretics justly driven from the town by her 'saintly' ancestor.",
+          "what_they_refuse": "To acknowledge the validity of any land deed, to speak the name 'Cormac' without spitting it, or to admit any flaw in Minister Davies.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "deed_mentions_cormac",
+            "cormacs_were_salt_harvesters"
+          ],
+          "sample_lines": {
+            "greeting": "You return. I sense a corrupting influence in your spirit. You have been listening to liars.",
+            "evasive": "That name... some families are best left buried. Theirs was a legacy of dissent and blasphemy.",
+            "pressured": "You wave that paper as if it's scripture! It is a relic of heretics! You are treading on sacred ground with profane intentions!",
+            "reveal": "My ancestor drove them out! They were a poison in this land, and he cleansed it for the glory of God! That is the only truth!"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Completely broken. Her formal, pious demeanor shatters, revealing raw, frantic desperation and rage.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must confront her with the full weight of evidence, including the Cormac deed and other historical contradictions.",
+          "goal": "To lash out at the player for destroying her family's honor and the foundation of her identity.",
+          "how_they_treat_player": "As the personal destroyer of her world. All pretense is gone, replaced by vitriolic, desperate accusations.",
+          "what_they_offer": "A screaming, bitter confession that reveals the core truth: her ancestor stole the land and violently suppressed the Cormacs.",
+          "what_they_refuse": "To apologize, show remorse, or accept her ancestor's actions as anything other than a 'righteous' necessity.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "deed_mentions_cormac"
+          ],
+          "sample_lines": {
+            "greeting": "You. You've done this. You've dug up the bones and paraded them through the fog. I hope you're satisfied.",
+            "evasive": "What more do you want from me? You have your pound of flesh!",
+            "pressured": "Stop saying that name! He did what he had to do! It was a righteous claim! This town was meant to be his!",
+            "reveal": "Fine! You want the journal? Take it! He smashed their idol and called it righteous! He built his church on their ruin! Are you happy now?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "finn",
+      "name": "Finn",
+      "role": "Bitter descendant of a disgraced family line",
+      "anchor_id": "salt_evaporation_vats",
+      "pose": "standing",
+      "vibe": "A lean man with a cynical smirk and restless hands. He wears simple, functional clothes but stands with a defiant posture, as if daring the world to challenge him.",
+      "public_face": "A cynical observer who uses sarcasm and leading questions to test the player. He seems to find the town's predicament grimly amusing.",
+      "private_truth": "His family worked for the Cormacs, the original salt-harvesters, and were disgraced when their patrons were purged. He knows the town's prosperity was built on stolen land and a lie.",
+      "protected_truth": "His own desire for vicarious revenge. He won't reveal the whole story at once, enjoying the process of watching the player dismantle the town's founding myth piece by piece.",
+      "misleading_claim": "Maybe the founder's statue is missing something. People used to say he held the town's future in his hands. Look where that got us.",
+      "voice_style": "Short, cynical, and leading. Rarely gives a straight answer, preferring to respond with another pointed question.",
+      "lie_style": "Malicious half-truths. He tells the truth in a way that is designed to cause the most trouble, omitting context to weaponize the information against his enemies.",
+      "pressure_points": "Demonstrating a genuine interest in the 'real' history, offering to confront the powerful families (like Elara), showing sympathy for those the town has forgotten.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Watches the player with cynical amusement, testing their perception and resolve before deciding if they are worth his time.",
+          "tension_state": "Testing the player",
+          "reveal_cost": null,
+          "goal": "To gauge the player's intelligence and motives without revealing any of his own investment in the town's secrets.",
+          "how_they_treat_player": "With dismissive sarcasm. He treats the player as an annoying tourist, but his pointed questions are subtle tests.",
+          "what_they_offer": "Vague, cynical observations about the town's decay and the futility of its industry. He offers no real clues, only mood and a sense of deeper rot.",
+          "what_they_refuse": "To answer any direct questions about history, the statue, or the other townsfolk. He deflects all serious inquiries.",
+          "reacts_to_clues_any": [
+            "church_and_sin",
+            "figure_is_solid"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Lost? Or just enjoying the scenery of decay? There's plenty of that to go around.",
+            "evasive": "History? That's just a story someone won. You should ask the people who think they're winning.",
+            "pressured": "You ask a lot of questions for a newcomer. That's not a popular hobby in Black Hollow.",
+            "reveal": "These vats haven't seen a drop of brine in years. This town is good at forgetting what fed it."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Actively drops weaponized half-truths to guide the player toward dismantling the town's founding myth. He sees the player as a tool.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": "Player must demonstrate a willingness to confront the powerful families by bringing him the Cormac name from the deed.",
+          "goal": "To use the player to expose the Cormac's erasure from history, enjoying the process of watching the town's elite squirm.",
+          "how_they_treat_player": "As a promising, if unwitting, accomplice. He is more engaged, offering puzzles and leading questions instead of outright dismissal.",
+          "what_they_offer": "The crucial clue that the Cormacs were the original salt-harvesters, directly linking them to the town's stolen prosperity.",
+          "what_they_refuse": "To give the full story. He will not explain the crime, only point to the victims and their stolen legacy, forcing the player to connect the dots.",
+          "reacts_to_clues_any": [
+            "deed_mentions_cormac"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, the historian returns. Found any interesting names in your dusty papers?",
+            "evasive": "The Cormacs? Some say they were charlatans. Others say they were just better at this than anyone else.",
+            "pressured": "You want me to just hand you the answer? The fun is in the chase. Go ask Elara about her family's 'righteous' claim.",
+            "reveal": "This town was built on salt, and the founders didn't know a thing about it. But the Cormacs did. They were the salt-harvesters."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "A grimly satisfied spectator to the chaos he has orchestrated. He watches the town's legacy unravel with a sense of vindication.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "Player must present a complete picture of the crime, confirmed by another source, before he will admit his personal stake.",
+          "goal": "To witness the final collapse of the founder's myth and savor the vicarious revenge he has waited his whole life for.",
+          "how_they_treat_player": "As a fellow conspirator. He drops the pretense of detachment and speaks with a raw, triumphant bitterness.",
+          "what_they_offer": "The final piece of the puzzle: his family's connection to the Cormacs and their shared disgrace. He offers confirmation, not new leads.",
+          "what_they_refuse": "To show remorse, offer a path to reconciliation, or take any responsibility. His goal was destruction, not justice.",
+          "reacts_to_clues_any": [
+            "founder_smashed_statue",
+            "cormac_deed_revealed"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Listen to that. The sound of comfortable lies catching in their throats. It's almost musical.",
+            "evasive": "My part? I just held a mirror up to this town. It's not my fault they're ugly.",
+            "pressured": "What did you expect, a parade? This isn't a happy story. There are no heroes here, least of all you.",
+            "reveal": "My family worked these vats for the Cormacs. When the founders purged them, they purged us too. We've been ghosts for a century. Welcome to the fog."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lydia_the_figure",
+      "name": "Lydia",
+      "role": "The 'ghost' and rightful heir to the Cormac land",
+      "anchor_id": "founders_statue",
+      "pose": "standing",
+      "vibe": "A still, silent woman in a simple, dark dress. Her presence is an unnerving, patient accusation. She does not speak or react, merely watches.",
+      "public_face": "A silent, ghostly figure that appears nightly, staring at the ruined church. She is the central anomaly of the mystery, an object of fear and speculation.",
+      "private_truth": "She is Lydia Cormac, the living descendant of the family that was framed and exiled. She possesses the original deed to the land and has returned to reclaim it legally and publicly.",
+      "protected_truth": "Her identity and her purpose. She remains silent to force the town's guilt to the surface, letting their lies and fears expose the truth for her.",
+      "misleading_claim": "My silence is my statement. The guilty will condemn themselves.",
+      "voice_style": "Initially silent. When she finally speaks, her voice is clear, calm, and direct, cutting through all the lies with the simple weight of fact.",
+      "lie_style": "Deception through silence. She allows others to project their own fears and lies onto her, knowing their fabrications will eventually collapse under their own weight.",
+      "pressure_points": "She cannot be pressured through conversation. The pressure point is on the player: they must gather the truth from others before she will speak.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "A silent, unmoving presence, staring at the ruined church foundation. She is an object of mystery, not a person to be engaged.",
+          "tension_state": "Testing the player",
+          "reveal_cost": null,
+          "goal": "To exist as an undeniable anomaly, forcing the townsfolk to react and reveal their shared unease.",
+          "how_they_treat_player": "She does not acknowledge the player's existence in any way. She is a fixed point in the landscape.",
+          "what_they_offer": "Her unsettling presence, which is the inciting incident of the entire mystery. The clue that she is a solid person, not a ghost.",
+          "what_they_refuse": "Any form of communication, reaction, or acknowledgment. She cannot be interacted with.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "(She does not move. She does not speak. Her eyes are fixed on the ruined church foundation.)",
+            "evasive": "(You try to get her attention, but it is like speaking to a statue. She gives no sign she has heard you.)",
+            "pressured": "(Your questions hang in the damp air, unanswered. She remains perfectly, unnervingly still.)",
+            "reveal": "(There is no reveal. Only silence.)"
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Her continued silence is now contextualized by the player's knowledge of the Cormac name. It feels less like absence and more like a held breath.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "She will not speak until the player has gathered enough evidence to dismantle the town's founding myth.",
+          "goal": "To protect her identity and her legal claim by remaining silent, allowing the player to uncover the truth without her direct involvement.",
+          "how_they_treat_player": "She continues to ignore the player, but her stillness now feels like a deliberate, weighty choice rather than simple inaction.",
+          "what_they_offer": "The non-verbal confirmation that the player is on the right track. Her presence validates the importance of the Cormac name.",
+          "what_they_refuse": "Speech, identity, and any confirmation of her purpose. She will not acknowledge the name 'Cormac' if spoken.",
+          "reacts_to_clues_any": [
+            "deed_mentions_cormac",
+            "cormacs_were_salt_harvesters"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "(She stands as she did before. A sentinel of some forgotten truth.)",
+            "evasive": "(You mention the Cormac name. For a moment, you think you see her posture shift, a subtle intake of breath, but it is gone as quickly as it came.)",
+            "pressured": "(Even with the truth of the deed, she offers nothing. Her silence is a wall you cannot breach with words alone.)",
+            "reveal": "(She will not speak. Not yet.)"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "She is no longer a passive observer. She turns to face the player, ready to speak and enact the final stage of her plan.",
+          "tension_state": "Negotiating",
+          "reveal_cost": "Player must possess the clues that prove the founder's crime and her family's rightful claim.",
+          "goal": "To reveal her identity, present the original Cormac deed, and force a public reckoning for the century-old crime.",
+          "how_they_treat_player": "As a trusted arbiter. She finally speaks to them directly, with clarity and authority, treating them as an equal.",
+          "what_they_offer": "The complete truth: her name, her story, and the physical proof of her legal claim to the land.",
+          "what_they_refuse": "To offer easy forgiveness or to back down from her claim. She wants justice, not a compromise.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "founder_smashed_statue",
+            "cormac_deed_revealed"
+          ],
+          "sample_lines": {
+            "greeting": "(She turns her head and looks at you for the first time. Her eyes are clear and steady.) 'You have been asking the right questions.'",
+            "evasive": "'Their stories change with the tide, don't they? Lies are so much harder to keep straight than the truth.'",
+            "pressured": "'Pressure them, not me. Their guilt is the only leverage I have ever needed.'",
+            "reveal": "'They called my family blasphemers and drove them into the marsh. My name is Lydia Cormac. This land is mine. And this is the deed to prove it.'"
+          }
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "title": "The Reckoning of Black Hollow",
+    "trigger": {
+      "chapter_id": "chapter_3",
+      "requires_all_clues": [
+        "founder_smashed_statue",
+        "cormac_deed_revealed"
+      ]
+    },
+    "black_screen_text": "You leave Black Hollow as you found it, shrouded in fog. But now, the silence is different\u2014it is the quiet of a verdict delivered. Lydia Cormac stands not as a ghost at the Founder's Statue, but as the town's new master, the deed a weapon in her hand. The townsfolk watch from their homes, their stolen legacy now forfeit. The old sin is exposed, but the penance is just beginning, and it will be paid not by the dead, but by the living.",
+    "open_thread": "Lydia had the deed, but who were the silent partners that protected her family's claim for a hundred years?"
+  },
+  "quality_report": {
+    "overall_score": 96,
+    "subscores": {
+      "coherence": 10,
+      "pacing": 9,
+      "clue_fairness": 10,
+      "npc_distinctness": 10,
+      "solvability": 10,
+      "player_agency": 8,
+      "tension": 10,
+      "voice_distinctness": 10,
+      "anomaly_over_exposition": 10,
+      "engagement": 9
+    },
+    "strengths": [
+      "The central twist is superb: grounded, logical, and satisfyingly re-contextualizes the entire story from a supernatural mystery to a criminal conspiracy.",
+      "NPCs are the core strength. Each has a distinct voice, a clear, non-neutral situation, and a compelling personal stake in the mystery's outcome.",
+      "Excellent adherence to 'anomaly over exposition.' The silent figure and broken statue are powerful, curiosity-driving anomalies.",
+      "The clue progression is logical, fair, and well-gated across three chapters, ensuring a solvable mystery with escalating tension.",
+      "The setting and player role are perfectly matched, providing a strong atmospheric foundation and a natural motivation for investigation.",
+      "The design successfully creates a talk-only experience that feels active and tense, perfectly capturing the Infocom philosophy."
+    ],
+    "problems": [
+      {
+        "severity": "low",
+        "issue": "The player's role as a 'cartographer' is a great entry point but feels disconnected from the conclusion. It's a setup without a payoff.",
+        "fix": "Tie the role back in the ending narration. E.g., 'You came to chart the coastline, but you ended up redrawing the map of Black Hollow itself, replacing a lie with the hard lines of truth.'"
+      },
+      {
+        "severity": "low",
+        "issue": "Lydia's total silence for two chapters is a bold choice that could frustrate players, who might mistake her for non-interactive scenery rather than a key NPC.",
+        "fix": "Use narration after a failed interaction to frame the silence as a deliberate choice. E.g., 'Her silence is a wall. You sense you do not yet have the words to breach it.'"
+      }
+    ]
+  },
+  "validation_report": {
+    "ok": true,
+    "issues": []
+  }
+}

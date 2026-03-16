@@ -1,0 +1,11 @@
+# Docker build context ignore (used for pipeline_job and other builds from repo root)
+venv
+output
+output_jobs
+.git
+.godot
+__pycache__
+*.pyc
+*.pyo
+.cursor
+game_client/node_modules

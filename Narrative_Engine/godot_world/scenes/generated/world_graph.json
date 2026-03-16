@@ -1,0 +1,105 @@
+{
+  "center_area_id": "chanderi_town_square",
+  "placements": [
+    {
+      "area_id": "tailor_street",
+      "relative_to": "center",
+      "dir": "NE",
+      "dist_bucket": "near"
+    },
+    {
+      "area_id": "abandoned_courtyard",
+      "relative_to": "center",
+      "dir": "NW",
+      "dist_bucket": "near"
+    },
+    {
+      "area_id": "old_library_archives",
+      "relative_to": "chanderi_town_square",
+      "dir": "E",
+      "dist_bucket": "medium"
+    },
+    {
+      "area_id": "haunted_forest_edge",
+      "relative_to": "center",
+      "dir": "S",
+      "dist_bucket": "medium"
+    },
+    {
+      "area_id": "shrine_of_the_goddess",
+      "relative_to": "haunted_forest_edge",
+      "dir": "E",
+      "dist_bucket": "far"
+    },
+    {
+      "area_id": "chanderi_at_dawn",
+      "relative_to": "chanderi_town_square",
+      "dir": "W",
+      "dist_bucket": "far"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from_area_id": "chanderi_town_square",
+      "to_area_id": "tailor_street",
+      "kind": "road",
+      "from_edge": "E",
+      "to_edge": "W"
+    },
+    {
+      "id": "conn_2",
+      "from_area_id": "chanderi_town_square",
+      "to_area_id": "abandoned_courtyard",
+      "kind": "road",
+      "from_edge": "W",
+      "to_edge": "E"
+    },
+    {
+      "id": "conn_3",
+      "from_area_id": "chanderi_town_square",
+      "to_area_id": "old_library_archives",
+      "kind": "trunk_road",
+      "from_edge": "E",
+      "to_edge": "W"
+    },
+    {
+      "id": "conn_4",
+      "from_area_id": "chanderi_town_square",
+      "to_area_id": "haunted_forest_edge",
+      "kind": "trunk_road",
+      "from_edge": "S",
+      "to_edge": "N"
+    },
+    {
+      "id": "conn_5",
+      "from_area_id": "haunted_forest_edge",
+      "to_area_id": "shrine_of_the_goddess",
+      "kind": "footpath",
+      "from_edge": "E",
+      "to_edge": "W"
+    },
+    {
+      "id": "conn_6",
+      "from_area_id": "chanderi_town_square",
+      "to_area_id": "chanderi_at_dawn",
+      "kind": "trunk_road",
+      "from_edge": "W",
+      "to_edge": "E"
+    }
+  ],
+  "story_spine": [
+    "chanderi_town_square",
+    "tailor_street",
+    "chanderi_town_square",
+    "abandoned_courtyard",
+    "chanderi_town_square",
+    "old_library_archives",
+    "chanderi_town_square",
+    "haunted_forest_edge",
+    "shrine_of_the_goddess",
+    "haunted_forest_edge",
+    "chanderi_town_square",
+    "chanderi_at_dawn"
+  ]
+}

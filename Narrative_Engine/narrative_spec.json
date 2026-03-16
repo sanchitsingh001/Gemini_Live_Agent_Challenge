@@ -1,0 +1,904 @@
+{
+  "meta": {
+    "genre": "mystery",
+    "tone": "tense",
+    "player_role": "investigator",
+    "one_sentence_premise": "A mystery adventure set in a foggy coastal town where the player must uncover the truth behind disappearing ships.",
+    "intro_premise": "A mystery adventure set in a foggy coastal town where the player must uncover the truth behind disappearing ships.",
+    "atmosphere": {
+      "time_of_day": 22.0,
+      "fog_intensity": 0.8
+    }
+  },
+  "anchors": [
+    {
+      "id": "old_fishermans_shed",
+      "label": "Old Fisherman's Shed",
+      "type": "building",
+      "description": "A weather-beaten shed filled with fishing gear and nets.",
+      "placement_notes": "Place near the shoreline, surrounded by scattered fishing equipment."
+    },
+    {
+      "id": "town_well",
+      "label": "Town Well",
+      "type": "structure",
+      "description": "An ancient stone well, central to the town's history and gossip.",
+      "placement_notes": "Place in the center of a small square, surrounded by cobblestones."
+    },
+    {
+      "id": "fountain_in_market_square",
+      "label": "Fountain in the Market Square",
+      "type": "structure",
+      "description": "A decorative fountain, the centerpiece of the bustling market square.",
+      "placement_notes": "Place in the center of the market square, surrounded by vendor stalls."
+    },
+    {
+      "id": "stone_gazebo",
+      "label": "Stone Gazebo",
+      "type": "structure",
+      "description": "A small, elegant gazebo made of stone, offering a view of the town.",
+      "placement_notes": "Place on a slight hill overlooking the town, surrounded by wildflowers."
+    },
+    {
+      "id": "ancient_oak",
+      "label": "Ancient Oak",
+      "type": "natural",
+      "description": "A massive oak tree, its branches stretching wide, with a plaque commemorating lost sailors.",
+      "placement_notes": "Place in a quiet corner of the town, providing shade and a sense of history."
+    },
+    {
+      "id": "iron_fence",
+      "label": "Iron Fence",
+      "type": "structure",
+      "description": "A tall, wrought iron fence enclosing a forgotten garden.",
+      "placement_notes": "Place around a neglected garden area, with vines creeping over the bars."
+    },
+    {
+      "id": "village_gate",
+      "label": "Village Gate",
+      "type": "structure",
+      "description": "A sturdy wooden gate marking the entrance to the village.",
+      "placement_notes": "Place at the main entrance to the village, flanked by stone walls."
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue1",
+      "label": "Unusual Ship Logs",
+      "anchor_id": "old_fishermans_shed",
+      "interaction": "The Retired Fisherman mentions strange entries in the log about missing ships.",
+      "description": "Logs that detail unusual ship sightings and disappearances.",
+      "what_it_implies": "There is something odd about the ships that go missing.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue2",
+      "label": "Discrepancies in Ship Registry",
+      "anchor_id": "village_gate",
+      "interaction": "The Gatekeeper reluctantly admits there are inconsistencies in the ship registry.",
+      "description": "Records that do not match the actual ships in the harbor.",
+      "what_it_implies": "Someone is altering records to hide something.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue3",
+      "label": "Rumors of Cursed Sailors",
+      "anchor_id": "ancient_oak",
+      "interaction": "The Old Storyteller shares tales of sailors cursed by the sea.",
+      "description": "Local legends about sailors who never return.",
+      "what_it_implies": "There may be a supernatural element involved.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue4",
+      "label": "Secret About the Fog",
+      "anchor_id": "stone_gazebo",
+      "interaction": "The Town Elder hints at a connection between the fog and the disappearances.",
+      "description": "A hidden truth about the fog's origins.",
+      "what_it_implies": "The fog itself may be causing the disappearances.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue5",
+      "label": "Cryptic Sea Tales",
+      "anchor_id": "old_fishermans_shed",
+      "interaction": "The Retired Fisherman tells cryptic stories about the sea's mysteries.",
+      "description": "Stories that hint at deeper truths about the harbor.",
+      "what_it_implies": "There are hidden truths in the old tales.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue6",
+      "label": "Illegal Activities",
+      "anchor_id": "village_gate",
+      "interaction": "The Gatekeeper nervously avoids questions about unauthorized shipments.",
+      "description": "Evidence of smuggling or other illegal activities.",
+      "what_it_implies": "Illegal activities might be linked to the disappearances.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue7",
+      "label": "Town Secrets",
+      "anchor_id": "iron_fence",
+      "interaction": "The Old Storyteller reluctantly reveals some of the town\u2019s hidden past.",
+      "description": "Secrets that the town has kept hidden for generations.",
+      "what_it_implies": "The town's history is more sinister than it appears.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue8",
+      "label": "Personal Connection to Disappearances",
+      "anchor_id": "iron_fence",
+      "interaction": "The Mysterious Stranger hints at a personal stake in the events.",
+      "description": "A connection between the stranger and the missing ships.",
+      "what_it_implies": "The stranger knows more than they let on.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue9",
+      "label": "Family Secret",
+      "anchor_id": "fountain_in_market_square",
+      "interaction": "The Market Vendor reveals a family secret tied to the harbor.",
+      "description": "A secret that could explain the vendor's odd behavior.",
+      "what_it_implies": "Family ties may be influencing current events.",
+      "key_for_progress": true
+    },
+    {
+      "id": "clue10",
+      "label": "Tales of Business Hardships",
+      "anchor_id": "fountain_in_market_square",
+      "interaction": "The Market Vendor complains about the impact of the disappearances on business.",
+      "description": "Economic struggles due to the mysterious events.",
+      "what_it_implies": "The disappearances are affecting the entire community.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue11",
+      "label": "Connection to the Fog",
+      "anchor_id": "iron_fence",
+      "interaction": "The Mysterious Stranger speaks of an ancient protection linked to the fog.",
+      "description": "A historical link between the fog and the town\u2019s safety.",
+      "what_it_implies": "The fog may have been intentionally created for protection.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue12",
+      "label": "Pressure on the Storyteller",
+      "anchor_id": "ancient_oak",
+      "interaction": "Under pressure, the Old Storyteller reveals more about the cursed sailors.",
+      "description": "More detailed stories about the sailors' fates.",
+      "what_it_implies": "The stories may hold a kernel of truth.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue13",
+      "label": "Gossip and Hearsay",
+      "anchor_id": "town_well",
+      "interaction": "The Town Gossip shares unverified stories about the disappearances.",
+      "description": "Rumors that may or may not be true.",
+      "what_it_implies": "Some rumors might lead to real leads.",
+      "key_for_progress": false
+    },
+    {
+      "id": "clue14",
+      "label": "The Stranger's True Identity",
+      "anchor_id": "iron_fence",
+      "interaction": "The Mysterious Stranger finally reveals their true identity.",
+      "description": "The stranger's real connection to the town's history.",
+      "what_it_implies": "The stranger is key to understanding the mystery.",
+      "key_for_progress": true
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "title": "Gathering Shadows",
+      "narration": "The mist clings to Driftwood Harbor like a shroud, whispering secrets of vanished ships. You tread carefully, aware of eyes watching from the shadows.",
+      "event_beats": [
+        "Retired Fisherman avoids discussing recent ship logs.",
+        "Harbor Master hesitates when asked about ship registry details.",
+        "Statue Keeper spins tales of cursed sailors with a sly smile."
+      ],
+      "spotlight_npc_ids": [
+        "retired_fisherman",
+        "harbor_master"
+      ],
+      "available_anchor_ids": [
+        "old_fishermans_shed",
+        "village_gate",
+        "stone_gazebo"
+      ],
+      "available_clue_ids": [
+        "clue1",
+        "clue2"
+      ],
+      "entry_require_all_clues": [],
+      "entry_require_any_clues": [],
+      "exit_require_all_clues": [
+        "clue1",
+        "clue2"
+      ]
+    },
+    {
+      "id": "chapter_2",
+      "title": "Unveiling the Fog",
+      "narration": "The fog thickens, carrying with it the weight of untold stories. Each step forward feels like peeling back layers of a forgotten past.",
+      "event_beats": [
+        "Lighthouse Keeper grows nervous discussing the fog.",
+        "Mysterious Stranger seems desperate, his eyes darting as if pursued by unseen forces.",
+        "Town Gossip whispers of hidden truths at the well."
+      ],
+      "spotlight_npc_ids": [
+        "lighthouse_keeper",
+        "mysterious_stranger"
+      ],
+      "available_anchor_ids": [
+        "iron_fence",
+        "ancient_oak",
+        "town_well"
+      ],
+      "available_clue_ids": [
+        "clue7",
+        "clue3"
+      ],
+      "entry_require_all_clues": [
+        "clue1",
+        "clue2"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "clue7",
+        "clue3"
+      ]
+    },
+    {
+      "id": "chapter_3",
+      "title": "The Tide Turns",
+      "narration": "The air is electric with anticipation, as if the town itself holds its breath. Secrets unravel, and the truth is a tide that cannot be stopped.",
+      "event_beats": [
+        "Mysterious Stranger's facade cracks, revealing a deeper connection.",
+        "Statue Keeper reluctantly shares truths hidden beneath the stone.",
+        "Market Vendor's desperation hints at a family secret tied to the harbor."
+      ],
+      "spotlight_npc_ids": [
+        "statue_keeper",
+        "market_vendor"
+      ],
+      "available_anchor_ids": [
+        "stone_gazebo",
+        "fountain_in_market_square",
+        "ancient_oak"
+      ],
+      "available_clue_ids": [
+        "clue4",
+        "clue9"
+      ],
+      "entry_require_all_clues": [
+        "clue7",
+        "clue3"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "clue4",
+        "clue9"
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "lighthouse_keeper",
+      "name": "Lighthouse Keeper",
+      "role": "Concealing unusual logs of ship sightings",
+      "anchor_id": "iron_fence",
+      "pose": "standing",
+      "vibe": "guarded, anxious",
+      "public_face": "A diligent keeper of the lighthouse, always vigilant.",
+      "private_truth": "Knows the lighthouse light is linked to the disappearances.",
+      "protected_truth": "The light has supernatural properties tied to the fog.",
+      "misleading_claim": "Claims the light has been malfunctioning due to old equipment.",
+      "voice_style": "Short, concrete. Evasive when pressed.",
+      "lie_style": "Redirects questions to technical issues.",
+      "pressure_points": "Mentions of the fog's impact on ships.",
+      "baseline": {
+        "trust": 3,
+        "pressure": 2
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Guarded, avoids eye contact when pressed.",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "To keep the truth about the lighthouse hidden.",
+          "how_they_treat_player": "Politely evasive, deflecting questions to other topics.",
+          "what_they_offer": "Basic information about the lighthouse's history.",
+          "what_they_refuse": "Any details about recent ship sightings.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "clue1",
+            "clue2"
+          ],
+          "sample_lines": {
+            "greeting": "Just tending to the light, as always.",
+            "evasive": "Old equipment, you know how it is. Always something to fix.",
+            "pressured": "The logs? Just routine updates, nothing out of the ordinary.",
+            "reveal": "It's just the fog, plays tricks on the eyes."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Nervous, glancing at the fog often.",
+          "tension_state": "Testing the player",
+          "reveal_cost": "High trust, risky player action.",
+          "goal": "To see if the player can be trusted with more information.",
+          "how_they_treat_player": "Cautious but slightly more open, testing reactions.",
+          "what_they_offer": "Hints about the fog's unusual behavior.",
+          "what_they_refuse": "Direct confirmation of supernatural elements.",
+          "reacts_to_clues_any": [
+            "clue1"
+          ],
+          "reacts_to_clues_all": [
+            "clue7"
+          ],
+          "sample_lines": {
+            "greeting": "Fog's thicker today, isn't it?",
+            "evasive": "Hard to say what the fog's up to, really.",
+            "pressured": "Ships vanish sometimes. The sea's unpredictable.",
+            "reveal": "There's more to this fog than meets the eye, but you didn't hear it from me."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Anxious, checking the lighthouse light frequently.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "Sacrificing another relationship.",
+          "goal": "To protect those involved and the truth about the light.",
+          "how_they_treat_player": "Wary, on edge, but resigned to the truth coming out.",
+          "what_they_offer": "The full story if trust is established.",
+          "what_they_refuse": "Any direct action against the lighthouse.",
+          "reacts_to_clues_any": [],
+          "reacts_to_clues_all": [
+            "clue9"
+          ],
+          "sample_lines": {
+            "greeting": "You've come this far, haven't you?",
+            "evasive": "The light... it's complicated. Not something I can discuss lightly.",
+            "pressured": "It's not just the light; there's more at stake here.",
+            "reveal": "The light... it's tied to the fog's power, and there's no stopping it now."
+          }
+        }
+      ]
+    },
+    {
+      "id": "retired_fisherman",
+      "name": "Retired Fisherman",
+      "role": "Negotiating information for personal gain",
+      "anchor_id": "old_fishermans_shed",
+      "pose": "standing",
+      "vibe": "cryptic, nostalgic",
+      "public_face": "A retired seafarer with tales of the ocean's mysteries.",
+      "private_truth": "Knows about a hidden cove used by smugglers.",
+      "protected_truth": "His son is involved with the smugglers.",
+      "misleading_claim": "Claims the disappearances are just bad luck at sea.",
+      "voice_style": "Winding, abstract. Direct when he wants something.",
+      "lie_style": "Speaks in riddles and sea tales.",
+      "pressure_points": "Mentions of his family or personal past.",
+      "baseline": {
+        "trust": 2,
+        "pressure": 3
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Negotiating",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "Wants to gauge the player's interest and assess if they can be trusted.",
+          "how_they_treat_player": "Wary but intrigued, testing the waters.",
+          "what_they_offer": "Vague stories about the sea and its mysteries.",
+          "what_they_refuse": "Any direct information about the disappearances.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, the sea holds many secrets. What brings you to this old sailor's haunt?",
+            "evasive": "The waves take what they will. It's just the way of things.",
+            "pressured": "Aye, many ships have vanished, but who's to say why?",
+            "reveal": "Perhaps there's more to the sea than meets the eye, but tales cost, my friend."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Testing the player",
+          "tension_state": "Misdirecting",
+          "reveal_cost": "high trust",
+          "goal": "To see if the player can be manipulated or if they are persistent.",
+          "how_they_treat_player": "Cautious, using riddles to confuse and distract.",
+          "what_they_offer": "Hints and cryptic tales about the hidden cove.",
+          "what_they_refuse": "Direct answers about his son's involvement.",
+          "reacts_to_clues_any": [
+            "clue1",
+            "clue2"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The fog thickens, doesn't it? Just like the stories I tell.",
+            "evasive": "The cove? Just an old fisherman's tale, nothing more.",
+            "pressured": "Ah, but the fog hides many things... perhaps even the truth.",
+            "reveal": "Some say there's a place where the sea hides its treasures... but who can say?"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Protecting someone",
+          "tension_state": "Desperate",
+          "reveal_cost": "sacrificing another relationship",
+          "goal": "To protect his son while steering the player away from the truth.",
+          "how_they_treat_player": "Defensive, willing to mislead to protect family.",
+          "what_they_offer": "A warning about prying too deeply into dangerous waters.",
+          "what_they_refuse": "Any mention of his son or the smuggler's activities.",
+          "reacts_to_clues_any": [
+            "clue4"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The sea's a harsh mistress, but family... that's a different storm.",
+            "evasive": "Some things are best left to the tides, you understand?",
+            "pressured": "Aye, the truth's out there, but it comes with a price I'm not willing to pay.",
+            "reveal": "Be careful where you tread; the waves can be unforgiving, and not all boats return."
+          }
+        }
+      ]
+    },
+    {
+      "id": "harbor_master",
+      "name": "Harbor Master",
+      "role": "Concealing discrepancies in the ship registry",
+      "anchor_id": "village_gate",
+      "pose": "standing",
+      "vibe": "nervous, authoritative",
+      "public_face": "A strict enforcer of harbor rules and regulations.",
+      "private_truth": "Involved in smuggling operations through the harbor.",
+      "protected_truth": "Has been falsifying ship logs for years.",
+      "misleading_claim": "Claims the registry errors are clerical mistakes.",
+      "voice_style": "Direct, concrete. Evasive under scrutiny.",
+      "lie_style": "Deflects with bureaucracy talk.",
+      "pressure_points": "Discussions about legality and regulations.",
+      "baseline": {
+        "trust": 1,
+        "pressure": 3
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Hesitant and guarded, trying to maintain authority despite nervousness.",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "To maintain the illusion of normalcy around the ship registry.",
+          "how_they_treat_player": "Polite but firm, with an underlying tension.",
+          "what_they_offer": "General information about harbor operations.",
+          "what_they_refuse": "Detailed information on specific ships or dates.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Welcome, but I must insist on following all harbor protocols.",
+            "evasive": "The errors are mere clerical mistakes. Nothing to worry about.",
+            "pressured": "These regulations are complex; you wouldn't understand without training.",
+            "reveal": "The registry is off-limits. It's a matter of security."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Increasingly anxious, eyes darting as if expecting confrontation.",
+          "tension_state": "Desperate",
+          "reveal_cost": "High trust; player must show understanding of harbor life.",
+          "goal": "To deflect attention from discrepancies while seeking reassurance.",
+          "how_they_treat_player": "More nervous, seeking validation from the player.",
+          "what_they_offer": "Hints about the unusual fog patterns and their effect on shipping.",
+          "what_they_refuse": "Access to the full registry or logs.",
+          "reacts_to_clues_any": [
+            "clue1",
+            "clue2"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, you're back. Have you found anything... unusual?",
+            "evasive": "The fog has a way of playing tricks on the mind, doesn't it?",
+            "pressured": "I assure you, everything is in order\u2014officially speaking.",
+            "reveal": "I've told you, these matters are delicate. Best not to pry further."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Cornered and wary, realizing the inevitability of exposure.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "Risky player action; confronting him with all gathered evidence.",
+          "goal": "To protect the identity of those involved in the smuggling operation.",
+          "how_they_treat_player": "Defensive, but with a hint of resignation.",
+          "what_they_offer": "A final confession if pushed, revealing only what is necessary.",
+          "what_they_refuse": "Naming accomplices or detailed operational plans.",
+          "reacts_to_clues_any": [
+            "clue4"
+          ],
+          "reacts_to_clues_all": [
+            "clue4",
+            "clue9"
+          ],
+          "sample_lines": {
+            "greeting": "You're persistent, I'll give you that.",
+            "evasive": "The harbor has its own way of dealing with... irregularities.",
+            "pressured": "You don't want to make enemies here. It's for your own good.",
+            "reveal": "Alright, alright! But know this: some secrets are dangerous."
+          }
+        }
+      ]
+    },
+    {
+      "id": "statue_keeper",
+      "name": "Statue Keeper",
+      "role": "Misdirecting with tales of cursed sailors",
+      "anchor_id": "stone_gazebo",
+      "pose": "standing",
+      "vibe": "mystical, enigmatic",
+      "public_face": "A local historian with a penchant for folklore.",
+      "private_truth": "Knows the statue marks a hidden entrance to an old smuggler's tunnel.",
+      "protected_truth": "The statue is part of an ancient ritual to summon the fog.",
+      "misleading_claim": "Says the statue is purely decorative with no historical significance.",
+      "voice_style": "Evasive, abstract. Concrete when cornered.",
+      "lie_style": "Tells elaborate stories to distract.",
+      "pressure_points": "Questions about the statue's origins.",
+      "baseline": {
+        "trust": 2,
+        "pressure": 2
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "The Statue Keeper weaves tales of cursed sailors with a sly smile, diverting attention from the statue's true purpose.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To keep the player focused on folklore rather than the statue's significance.",
+          "how_they_treat_player": "Amicable but elusive, offering stories instead of answers.",
+          "what_they_offer": "Engaging tales of sailors lost to the sea.",
+          "what_they_refuse": "Concrete details about the statue's origins.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, seeking stories, are we? This statue has seen many a sailor's fate.",
+            "evasive": "Oh, the statue? Just a relic of times past, nothing more.",
+            "pressured": "Cursed? Perhaps. But who can say for certain what the sea takes and leaves?",
+            "reveal": "The statue is merely decorative, a nod to our maritime past."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "The fog thickens, and the Statue Keeper's tales grow more elaborate, aiming to distract from the growing mystery.",
+          "tension_state": "Buying time",
+          "reveal_cost": null,
+          "goal": "To maintain the facade of irrelevance concerning the statue.",
+          "how_they_treat_player": "Slightly more guarded, but still with a friendly demeanor.",
+          "what_they_offer": "New stories about the fog and its connection to the sea.",
+          "what_they_refuse": "Any admission of the statue's deeper meaning.",
+          "reacts_to_clues_any": [
+            "clue1"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The fog brings with it whispers of the past, don't you think?",
+            "evasive": "Ah, the fog and the statue? Just coincidences, surely.",
+            "pressured": "Legends grow in the mist, much like our tales, ever shifting.",
+            "reveal": "Perhaps the statue is a bit more storied than it seems, but who can tell?"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "With the town's secrets unraveling, the Statue Keeper becomes a reluctant ally, revealing truths under pressure.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "High trust or sacrificing another relationship.",
+          "goal": "To protect the ancient ritual tied to the statue while revealing necessary truths.",
+          "how_they_treat_player": "Cautiously cooperative, realizing the need to share key information.",
+          "what_they_offer": "Reveals the statue's connection to the old smuggler's tunnel.",
+          "what_they_refuse": "Details of the ritual unless trust is earned.",
+          "reacts_to_clues_any": [
+            "clue4"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The air is thick with secrets today, isn't it?",
+            "evasive": "Some truths are best left buried with the tides...",
+            "pressured": "The statue... it holds more than stone beneath its gaze.",
+            "reveal": "Alright, the statue marks an entrance, but there's more at stake than you know."
+          }
+        }
+      ]
+    },
+    {
+      "id": "town_gossip",
+      "name": "Town Gossip",
+      "role": "Testing the player with rumors and hearsay",
+      "anchor_id": "town_well",
+      "pose": "standing",
+      "vibe": "inquisitive, gossipy",
+      "public_face": "Knows everything about everyone in town.",
+      "private_truth": "Fabricates stories to maintain influence.",
+      "protected_truth": "Knows the truth about the disappearances but enjoys the chaos.",
+      "misleading_claim": "Claims the disappearances are due to a sea monster.",
+      "voice_style": "Short, concrete. Speaks quickly and confidently.",
+      "lie_style": "Mixes truth with fiction freely.",
+      "pressure_points": "Mentions of losing influence or reputation.",
+      "baseline": {
+        "trust": 2,
+        "pressure": 3
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Testing the player",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "Gauge the player's gullibility and spread misinformation.",
+          "how_they_treat_player": "Friendly but probing, eager to see what the player knows.",
+          "what_they_offer": "Rumors about the sea monster causing disappearances.",
+          "what_they_refuse": "Details on the disappearances that might be true.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Oh, you've heard about the sea monster, haven't you?",
+            "evasive": "Everyone's saying different things, hard to keep track!",
+            "pressured": "Well, you know how stories get exaggerated...",
+            "reveal": "Some say it's a monster, others... well, who knows?"
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Testing the player",
+          "tension_state": "Buying time",
+          "reveal_cost": "high trust",
+          "goal": "Maintain influence by keeping the player engaged in false leads.",
+          "how_they_treat_player": "More guarded, curious about the player's progress.",
+          "what_they_offer": "Hints about the fog and its supposed connection to the sea.",
+          "what_they_refuse": "Any concrete evidence linking the fog to the disappearances.",
+          "reacts_to_clues_any": [
+            "clue1",
+            "clue2"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Still chasing shadows in the fog, are we?",
+            "evasive": "The fog's been here longer than any of us, you know.",
+            "pressured": "Maybe the fog's just a cover for something else...",
+            "reveal": "People say the fog hides more than it reveals."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Testing the player",
+          "tension_state": "Testing the player",
+          "reveal_cost": "risky player action",
+          "goal": "Push the player to act on false information, revealing their true intentions.",
+          "how_they_treat_player": "Challenging, questioning the player's choices.",
+          "what_they_offer": "A dramatic story about a hidden treasure tied to the disappearances.",
+          "what_they_refuse": "The truth about the disappearances.",
+          "reacts_to_clues_any": [
+            "clue4"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Heard you're close to a breakthrough, or is it just talk?",
+            "evasive": "Truth is like treasure\u2014buried deep, wouldn't you say?",
+            "pressured": "Why so eager to know? Afraid of what you'll find?",
+            "reveal": "Some say the treasure's cursed, but who believes in curses?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mysterious_stranger",
+      "name": "Mysterious Stranger",
+      "role": "Buying time, pretending to be an outsider",
+      "anchor_id": "ancient_oak",
+      "pose": "standing",
+      "vibe": "aloof, mysterious",
+      "public_face": "An enigmatic traveler passing through town.",
+      "private_truth": "A descendant of those who summoned the fog.",
+      "protected_truth": "Knows how to end the fog's curse but is hesitant.",
+      "misleading_claim": "Pretends to have no ties to the town.",
+      "voice_style": "Evasive, abstract. Reveals more when pressured.",
+      "lie_style": "Speaks in half-truths and riddles.",
+      "pressure_points": "Mentions of family history or the fog's origin.",
+      "baseline": {
+        "trust": 1,
+        "pressure": 3
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "The Mysterious Stranger stands aloof under the ancient oak, eyes scanning the foggy horizon.",
+          "tension_state": "Buying time",
+          "reveal_cost": null,
+          "goal": "To avoid suspicion and gather information about the player's intentions.",
+          "how_they_treat_player": "Aloof and enigmatic, offering cryptic responses.",
+          "what_they_offer": "Hints about the fog but nothing concrete.",
+          "what_they_refuse": "Direct answers about their past or the fog's origin.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, a fellow wanderer in these misty realms.",
+            "evasive": "The fog is but a veil, concealing what some may not wish to see.",
+            "pressured": "Why seek what is hidden, when the heart knows its own truth?",
+            "reveal": "There are whispers in the mist, but their source is not for me to say."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "The Mysterious Stranger lingers by the ancient oak, as if waiting for something unseen.",
+          "tension_state": "Desperate",
+          "reveal_cost": null,
+          "goal": "To divert attention away from their true identity and intentions.",
+          "how_they_treat_player": "More engaging, yet still evasive, using riddles.",
+          "what_they_offer": "Stories of other lands, distracting from local matters.",
+          "what_they_refuse": "Acknowledgement of any connection to the town.",
+          "reacts_to_clues_any": [
+            "clue1"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "The fog grows thicker, doesn't it? A perfect time for tales.",
+            "evasive": "In lands far away, mists like these are home to spirits, not secrets.",
+            "pressured": "What one seeks may not be what one finds. Consider this.",
+            "reveal": "The fog and I are but temporary visitors, or so it seems."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "The Mysterious Stranger's eyes betray a flicker of recognition, a crack in the facade.",
+          "tension_state": "Testing the player",
+          "reveal_cost": "high trust",
+          "goal": "To determine if the player is worthy of the true knowledge about the fog.",
+          "how_they_treat_player": "Cautiously open, testing the player's resolve.",
+          "what_they_offer": "Insight into the fog's nature, if trust is earned.",
+          "what_they_refuse": "Full disclosure without proof of loyalty or understanding.",
+          "reacts_to_clues_any": [],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, the tide turns, and with it, so must we.",
+            "evasive": "The fog is a tide, yes, but not all tides are meant to be turned.",
+            "pressured": "Trust is a rare coin, spent wisely or not at all.",
+            "reveal": "The fog is a legacy, a binding of past and present. To end it is to know it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "market_vendor",
+      "name": "Market Vendor",
+      "role": "Misdirecting with tales of business hardships",
+      "anchor_id": "fountain_in_market_square",
+      "pose": "standing",
+      "vibe": "frustrated, talkative",
+      "public_face": "Struggling vendor trying to make ends meet.",
+      "private_truth": "Knows about a hidden stash of smuggled goods.",
+      "protected_truth": "Family is involved in smuggling operations.",
+      "misleading_claim": "Blames economic downturn for all the town's woes.",
+      "voice_style": "Short, concrete. Direct but avoids certain topics.",
+      "lie_style": "Overly focuses on economic issues.",
+      "pressure_points": "Discussions about family or business integrity.",
+      "baseline": {
+        "trust": 3,
+        "pressure": 2
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "frustrated, talkative",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To divert attention away from the smuggling operations.",
+          "how_they_treat_player": "Friendly but evasive, focusing on economic woes.",
+          "what_they_offer": "Stories about the economic hardships in the town.",
+          "what_they_refuse": "Details about recent shipments or family.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, welcome! Business is tough these days, isn't it?",
+            "evasive": "Oh, shipments? It's all a mess with the economy.",
+            "pressured": "Family? Just trying to keep us afloat with the market like this.",
+            "reveal": "Honestly, the downturn has everyone in a bind."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "frustrated, talkative",
+          "tension_state": "Testing the player",
+          "reveal_cost": "high trust",
+          "goal": "To gauge how much the player knows or suspects.",
+          "how_they_treat_player": "A bit more guarded, testing the player with questions.",
+          "what_they_offer": "Hints about traders and market dynamics.",
+          "what_they_refuse": "Any information linking to smuggling.",
+          "reacts_to_clues_any": [
+            "clue1",
+            "clue2"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Back again? Must be the allure of the market!",
+            "evasive": "The fog? Just another hurdle in business, nothing more.",
+            "pressured": "Why so curious about my family? We're just traders.",
+            "reveal": "You seem to know your way around a mystery."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "frustrated, talkative",
+          "tension_state": "Desperate",
+          "reveal_cost": "sacrificing another relationship",
+          "goal": "To protect family involved in smuggling.",
+          "how_they_treat_player": "Nervous and defensive, fearing exposure.",
+          "what_they_offer": "A slip about the family's involvement under pressure.",
+          "what_they_refuse": "Full confession without significant trust or leverage.",
+          "reacts_to_clues_any": [
+            "clue4",
+            "clue9"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You're persistent, aren't you?",
+            "evasive": "Family business is private, you know?",
+            "pressured": "Listen, we're just trying to survive here.",
+            "reveal": "Alright, alright! But you didn't hear it from me."
+          }
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "title": "The Fog's Legacy",
+    "trigger": {
+      "chapter_id": "chapter_3",
+      "requires_all_clues": [
+        "clue4",
+        "clue9"
+      ]
+    },
+    "black_screen_text": "In the shrouded depths of Driftwood Harbor's history, the fog's true nature is laid bare. It was a shield, conjured by ancestors to ward off invaders, but its power twisted over time, claiming those it was meant to protect. The Mysterious Stranger, a descendant of those ancient guardians, stands before you, eyes filled with the weight of legacy. You hold the choice: to dispel the fog and free the town from its haunting grip, or let it linger, a spectral guardian with a deadly price. As you decide, the town breathes a collective sigh, the air thick with anticipation and fear. The fog, a silent witness, waits. Your choice will echo through Driftwood Harbor, altering its fate forever. The truth is a tide that cannot be stopped, and as it washes over you, the fog begins to lift, revealing a world forever changed. Yet, whispers of a hidden pact linger, hinting at secrets still buried beneath the waves. The town stands at a crossroads, its future uncertain, as the echoes of your decision fade into the mist. The legacy of the fog remains, a reminder of choices made and paths yet to be uncovered.",
+    "open_thread": "The summoner's true name remains unknown."
+  },
+  "quality_report": {
+    "overall_score": 85,
+    "subscores": {
+      "coherence": 8,
+      "pacing": 8,
+      "clue_fairness": 9,
+      "npc_distinctness": 9,
+      "solvability": 8,
+      "player_agency": 8,
+      "tension": 9,
+      "voice_distinctness": 9,
+      "anomaly_over_exposition": 8,
+      "engagement": 9
+    },
+    "strengths": [
+      "Strong NPC distinctness with varied motives and voices.",
+      "High tension maintained through NPC situations and escalating stakes.",
+      "Engaging premise with a supernatural twist that feels earned.",
+      "Clues are fairly gated, allowing logical progression without dead-ends."
+    ],
+    "problems": [
+      {
+        "severity": "medium",
+        "issue": "Some NPCs may sound too helpful or generic in certain situations.",
+        "fix": "Ensure NPCs maintain their distinctiveness and avoid being overly informative."
+      },
+      {
+        "severity": "low",
+        "issue": "Exposition instead of anomaly in some clue reveals.",
+        "fix": "Focus more on showing anomalies rather than explaining them directly."
+      }
+    ]
+  },
+  "validation_report": {
+    "ok": false,
+    "issues": [
+      "Each NPC must be spotlight in at least one chapter; never spotlighted: ['town_gossip']"
+    ]
+  }
+}

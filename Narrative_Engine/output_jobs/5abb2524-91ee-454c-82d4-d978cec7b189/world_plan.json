@@ -1,0 +1,475 @@
+{
+  "areas": [
+    {
+      "id": "market_square",
+      "scale_hint": "medium",
+      "narrative": "The public heart of Brackenford, a muddy plaza where official pronouncements are made, justice is meted out, and rumors spread from the central well. It's a place of both community and judgment.",
+      "entities": [
+        {
+          "id": "town_well",
+          "group": "town_well",
+          "kind": "landmark",
+          "type": "Stone Wellhead",
+          "tags": [
+            "Stone Wellhead",
+            "circular",
+            "stone",
+            "wellhead",
+            "wide",
+            "moss",
+            "stained",
+            "sits",
+            "center",
+            "small"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "market_cross",
+          "group": "market_cross",
+          "kind": "landmark",
+          "type": "Stone Monument",
+          "tags": [
+            "Stone Monument",
+            "weathered",
+            "stone",
+            "monument",
+            "standing",
+            "wide",
+            "octagonal",
+            "base",
+            "carvings",
+            "worn"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "the_stocks",
+          "group": "the_stocks",
+          "kind": "landmark",
+          "type": "Punishment Device",
+          "tags": [
+            "Punishment Device",
+            "sturdy",
+            "wooden",
+            "punishment",
+            "device",
+            "holes",
+            "head",
+            "hands",
+            "locked",
+            "empty"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "market_stalls_wood",
+          "group": "market_stalls_wood",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "wood",
+            "market",
+            "commerce"
+          ],
+          "count": 4,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "public_whipping_post",
+          "group": "public_whipping_post",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "wood",
+            "punishment",
+            "public"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "horse_trough_stone",
+          "group": "horse_trough_stone",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "water",
+            "animal"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "guildhall_facade",
+          "group": "guildhall_facade",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "timber_frame",
+            "wattle_daub",
+            "civic"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "large"
+        },
+        {
+          "id": "alehouse_facade",
+          "group": "alehouse_facade",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "timber_frame",
+            "commerce",
+            "social"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "merchants_house_facade",
+          "group": "merchants_house_facade",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "timber_frame",
+            "residence",
+            "commerce"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "butchers_stone_block",
+          "group": "butchers_stone_block",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "market",
+            "workstation"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        }
+      ]
+    },
+    {
+      "id": "churchyard",
+      "scale_hint": "medium",
+      "narrative": "The town's spiritual center, a walled-off sanctuary of quiet gravestones and secrets. The imposing bell tower stands sentinel, but its purpose has been corrupted from sacred to conspiratorial.",
+      "entities": [
+        {
+          "id": "churchyard_lychgate",
+          "group": "churchyard_lychgate",
+          "kind": "landmark",
+          "type": "Roofed Gate",
+          "tags": [
+            "Roofed Gate",
+            "heavy",
+            "timber",
+            "framed",
+            "gate",
+            "slate",
+            "roof",
+            "marking",
+            "sole",
+            "entrance"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "bell_tower_base",
+          "group": "bell_tower_base",
+          "kind": "landmark",
+          "type": "Tower Foundation",
+          "tags": [
+            "Tower Foundation",
+            "thick",
+            "mossy",
+            "stone",
+            "foundation",
+            "church",
+            "bell",
+            "tower",
+            "heavy",
+            "iron"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "old_gravestone",
+          "group": "old_gravestone",
+          "kind": "landmark",
+          "type": "landmark",
+          "tags": [
+            "stone",
+            "cemetery",
+            "memorial"
+          ],
+          "count": 8,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "stone_family_crypt",
+          "group": "stone_family_crypt",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "cemetery",
+            "tomb"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "churchyard_wall_section",
+          "group": "churchyard_wall_section",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "wall",
+            "boundary"
+          ],
+          "count": 6,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "ancient_yew_tree",
+          "group": "ancient_yew_tree",
+          "kind": "landmark",
+          "type": "natural",
+          "tags": [
+            "tree",
+            "ancient",
+            "cemetery"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "large"
+        },
+        {
+          "id": "weathered_stone_sarcophagus",
+          "group": "weathered_stone_sarcophagus",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "cemetery",
+            "tomb",
+            "noble"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "sexton_tool_shed",
+          "group": "sexton_tool_shed",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "wood",
+            "stone",
+            "utility"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "church_main_facade",
+          "group": "church_main_facade",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "stone",
+            "religious",
+            "gothic_elements"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "huge"
+        }
+      ]
+    },
+    {
+      "id": "tanners_yard",
+      "scale_hint": "small",
+      "narrative": "The foul-smelling industrial fringe of town, hidden behind workshops. The ground is stained and barren around the sunken vats, a place where unpleasant work is done and uncomfortable truths are hidden.",
+      "entities": [
+        {
+          "id": "tannery_vats",
+          "group": "tannery_vats",
+          "kind": "landmark",
+          "type": "Sunken Stone Vats",
+          "tags": [
+            "Sunken Stone Vats",
+            "series",
+            "large",
+            "square",
+            "stone",
+            "vats",
+            "sunken",
+            "ground",
+            "behind",
+            "tanner"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "tanners_workshop_building",
+          "group": "tanners_workshop_building",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "timber_frame",
+            "industrial",
+            "workshop"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "hide_drying_rack",
+          "group": "hide_drying_rack",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "wood",
+            "industrial",
+            "tannery"
+          ],
+          "count": 2,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "tannery_storage_shed",
+          "group": "tannery_storage_shed",
+          "kind": "landmark",
+          "type": "building",
+          "tags": [
+            "wood",
+            "utility",
+            "storage"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "fleshing_beam_station",
+          "group": "fleshing_beam_station",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "wood",
+            "log",
+            "workstation",
+            "tannery"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "lime_pit_stone",
+          "group": "lime_pit_stone",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "pit",
+            "industrial",
+            "tannery"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        },
+        {
+          "id": "bark_grinding_mill",
+          "group": "bark_grinding_mill",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "stone",
+            "wood",
+            "mill",
+            "industrial"
+          ],
+          "count": 1,
+          "placeable_3d_asset": true,
+          "size_bucket": "medium"
+        },
+        {
+          "id": "rickety_yard_fence",
+          "group": "rickety_yard_fence",
+          "kind": "landmark",
+          "type": "structure",
+          "tags": [
+            "wood",
+            "fence",
+            "boundary"
+          ],
+          "count": 4,
+          "placeable_3d_asset": true,
+          "size_bucket": "small"
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "npc_id": "old_man_hemlock",
+      "anchor_id": "town_well"
+    },
+    {
+      "npc_id": "reeve_gable",
+      "anchor_id": "market_cross"
+    },
+    {
+      "npc_id": "brother_finnian",
+      "anchor_id": "churchyard_lychgate"
+    },
+    {
+      "npc_id": "blacksmith_rowan",
+      "anchor_id": "the_stocks"
+    },
+    {
+      "npc_id": "agnes_the_widow",
+      "anchor_id": "bell_tower_base"
+    },
+    {
+      "npc_id": "elara_the_tanners_girl",
+      "anchor_id": "tannery_vats"
+    }
+  ]
+}

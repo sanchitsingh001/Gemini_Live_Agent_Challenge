@@ -1,0 +1,823 @@
+{
+  "meta": {
+    "genre": "mystery",
+    "tone": "tense",
+    "player_role": "investigator",
+    "one_sentence_premise": "You are the town\u2019s new night watch, assigned to patrol the fog-soaked alleys of Brackenford. Every door is bolted from t...",
+    "intro_premise": "You are the town\u2019s new night watch, assigned to patrol the fog-soaked alleys of Brackenford. Every door is bolted from the inside, yet someone keeps leaving fresh footprints leading to the empty well. At midnight, the bell tower rings once\u2014then you hear your own name whispered from the dark.",
+    "visual_setting_lock": "- SETTING + PLAYER ROLE\nLate 15th-century English market town of Brackenford. The architecture is timber-framed wattle-and-daub with stone foundations. The player is the town's new, outsider Night Watch, hired after the previous one \"left.\"\n\n- OUTDOOR ANCHORS\n1.  The Town Well: A circular stone wellhead in a small, muddy plaza.\n2.  Market Cross: A weathered stone monument on an octagonal base where proclamations are made.\n3.  Churchyard Lychgate: A heavy timber-and-slate roofed gate, the only entrance to the churchyard.\n4.  The Stocks: A sturdy wooden punishment device, locked and empty, near the Market Cross.\n5.  Bell Tower Base: The thick, mossy stone foundation of the church bell tower. The door is barred.\n6.  Tannery Vats: A series of large, sunken stone vats behind the tanner's workshop, emitting a foul stench.\n\n- NPCS, ANCHORS, AND SITUATIONS\n1.  **Old Man Hemlock** (at The Town Well)\n    -   Ch 1: Misdirecting. He's the one who \"finds\" the footprints and loudly proclaims it's the ghost of the \"Well Maiden\" to establish the official, supernatural story.\n    -   Ch 2: Testing the player. Seeing the player isn't scared off, he tells more elaborate, contradictory ghost stories to test the player's gullibility and resolve.\n    -   Ch 3: Protecting someone. Drops the act and becomes grimly paternal, warning the player that \"some truths are a mercy to leave buried.\"\n\n2.  **Reeve Gable** (at the Market Cross)\n    -   Ch 1: Negotiating. He officially welcomes the player but tries to subtly limit their authority, stating that Brackenford handles its own \"spiritual matters.\"\n    -   Ch 2: Buying time. When presented with inconsistencies, he dismisses them as local folklore, attempting to placate the player and stall the investigation.\n    -   Ch 3: Protecting someone. Confronted with the truth, he drops all pretense, revealing the conspiracy and presenting the player with a choice: join the silence or suffer the consequences.\n\n3.  **Brother Finnian** (at the Churchyard Lychgate)\n    -   Ch 1: Misdirecting. Uses his religious authority to support the ghost story, speaking of unquiet souls and the sin of disturbing the dead.\n    -   Ch 2: Negotiating. Senses the playe",
+    "experience": {
+      "opening_image_path": "opening.png",
+      "first_objective_npc_id": "old_man_hemlock",
+      "first_objective_text": "Speak with old_man_hemlock \u2014 they may know how to begin.",
+      "setup_screen_path": "setup_screen.png",
+      "ending_screen_path": "ending_screen.png"
+    },
+    "title": "You are the town\u2019s new night watch, assigned to patrol the fog-soaked alleys of ",
+    "narrator_setup": "You are the new Night Watch in fog-bound Brackenford, a town locked tight against the night. But something is already inside, leaving fresh footprints to the empty well. After the midnight bell tolls its single, lonely note, a whisper finds you in the dark. It knows your name.",
+    "atmosphere": {
+      "time_of_day": 0.0,
+      "fog_intensity": 0.9
+    }
+  },
+  "anchors": [
+    {
+      "id": "town_well",
+      "label": "The Town Well",
+      "type": "Stone Wellhead",
+      "description": "A circular stone wellhead, wide and moss-stained, sits in the center of a small, muddy plaza. Its rope and bucket are gone.",
+      "placement_notes": "Place in the center of a small, open plaza area. The ground around it should be textured as mud or heavily trodden earth. It occupies a 2x2 grid space."
+    },
+    {
+      "id": "market_cross",
+      "label": "Market Cross",
+      "type": "Stone Monument",
+      "description": "A weathered stone monument standing on a wide, octagonal base. Its carvings are worn smooth by time and weather.",
+      "placement_notes": "Place in a prominent, open area like a town square. It should be a central landmark, accessible from several directions, occupying a 3x3 grid base."
+    },
+    {
+      "id": "churchyard_lychgate",
+      "label": "Churchyard Lychgate",
+      "type": "Roofed Gate",
+      "description": "A heavy, timber-framed gate with a slate roof, marking the sole entrance to the churchyard. A low stone wall extends from either side.",
+      "placement_notes": "Place as an entrance point through a low stone wall that defines a boundary. The gate itself is a solid, roofed structure that occupies a few grid cells."
+    },
+    {
+      "id": "the_stocks",
+      "label": "The Stocks",
+      "type": "Punishment Device",
+      "description": "A sturdy wooden punishment device with holes for a head and hands. It is locked and empty, showing signs of wear and damp.",
+      "placement_notes": "Place near the Market Cross in the main square. It should be set on a small stone or packed earth base, slightly off to the side of a main path."
+    },
+    {
+      "id": "bell_tower_base",
+      "label": "Bell Tower Base",
+      "type": "Tower Foundation",
+      "description": "The thick, mossy stone foundation of the church bell tower. A heavy, iron-strapped wooden door is barred from the outside.",
+      "placement_notes": "Place as a large, square base structure, adjacent to a churchyard wall. It should feel imposing and inaccessible, occupying a 4x4 grid area."
+    },
+    {
+      "id": "tannery_vats",
+      "label": "Tannery Vats",
+      "type": "Sunken Stone Vats",
+      "description": "A series of large, square stone vats, sunken into the ground behind the tanner's workshop. A foul, chemical stench rises from them.",
+      "placement_notes": "Place behind a workshop building. The vats are ground-level or slightly sunken, occupying a significant rectangular grid area. The ground nearby is stained and barren."
+    }
+  ],
+  "clues": [
+    {
+      "id": "well_maiden_story",
+      "label": "The Well Maiden Ghost",
+      "anchor_id": "town_well",
+      "interaction": "Hemlock points to muddy footprints, his voice a conspiratorial whisper as he tells the tale of a local ghost.",
+      "description": "Old Man Hemlock claims the fresh footprints near the well belong to the 'Well Maiden,' a ghost who supposedly drowned there long ago.",
+      "what_it_implies": "There is a supernatural explanation for strange occurrences, which the town seems to accept as fact.",
+      "key_for_progress": true
+    },
+    {
+      "id": "frayed_bell_rope",
+      "label": "The Frayed Bell Rope",
+      "anchor_id": "bell_tower_base",
+      "interaction": "Agnes sighs heavily, explaining that she is a poor widow and cannot afford to fix the old, frayed bell rope.",
+      "description": "Agnes, the widow, says the bell at the tower only tolls once because the rope is old and damaged, and she lacks the coin for repairs.",
+      "what_it_implies": "The strange single bell toll has a mundane, if sad, explanation.",
+      "key_for_progress": true
+    },
+    {
+      "id": "drunken_watchman_rumor",
+      "label": "The Drunken Watchman",
+      "anchor_id": "the_stocks",
+      "interaction": "Rowan the blacksmith scoffs, dismissing your predecessor as a drunk who stole from the town and fled in the night.",
+      "description": "The previous Night Watch was a drunkard who stole money and abandoned his post, according to the blacksmith.",
+      "what_it_implies": "Your predecessor was unreliable and his absence is not considered suspicious by the townsfolk.",
+      "key_for_progress": true
+    },
+    {
+      "id": "tannery_tragedy",
+      "label": "A Recent Tragedy",
+      "anchor_id": "tannery_vats",
+      "interaction": "Elara avoids eye contact, vaguely mentioning a 'terrible accident' that recently befell her family.",
+      "description": "Elara, the tanner's daughter, alludes to a recent, unspoken tragedy that has affected her family, but refuses to elaborate.",
+      "what_it_implies": "Something bad happened at the tannery, and the family is afraid to speak about it.",
+      "key_for_progress": true
+    },
+    {
+      "id": "dry_well_contradiction",
+      "label": "The Dry Well",
+      "anchor_id": "town_well",
+      "interaction": "While adding details to his ghost story, Hemlock absentmindedly mentions the well has been bone dry for over a year.",
+      "description": "Old Man Hemlock lets slip that the town well, supposedly haunted by a drowned maiden, has been completely dry since last summer's drought.",
+      "what_it_implies": "The ghost story is impossible. If the footprints aren't from a ghost, someone is visiting the dry well at night.",
+      "key_for_progress": true
+    },
+    {
+      "id": "mercy_over_law",
+      "label": "Mercy Over Law",
+      "anchor_id": "churchyard_lychgate",
+      "interaction": "Brother Finnian speaks philosophically, arguing that God's mercy can require men to hide a sinner from worldly law.",
+      "description": "The priest, Brother Finnian, speaks of a moral and religious duty to sometimes choose 'God's mercy' over the 'cruelty of law'.",
+      "what_it_implies": "The church may be complicit in hiding a fugitive for what it sees as a higher purpose.",
+      "key_for_progress": false
+    },
+    {
+      "id": "watchman_asked_questions",
+      "label": "The Watchman's Questions",
+      "anchor_id": "the_stocks",
+      "interaction": "Rowan angrily recalls that the last Watchman was 'a nosy bastard,' always asking about the tanner's boy.",
+      "description": "The previous Night Watch wasn't a simple drunk; he was actively investigating the tanner's family before he vanished.",
+      "what_it_implies": "The disappearance of the last Watchman is directly linked to his investigation of the tannery.",
+      "key_for_progress": true
+    },
+    {
+      "id": "bell_is_a_signal",
+      "label": "The Bell Signal",
+      "anchor_id": "bell_tower_base",
+      "interaction": "Confronted with news of Thomas's survival, Agnes confesses the bell's true purpose.",
+      "description": "Agnes admits the bell is a signal to let her nephew, Thomas, know when it's safe to come to the dry well for supplies.",
+      "what_it_implies": "Agnes is a key conspirator, helping Thomas survive. The 'ghost' at the well is Thomas, and the bell is his all-clear.",
+      "key_for_progress": true
+    },
+    {
+      "id": "brother_in_hiding",
+      "label": "The Brother in Hiding",
+      "anchor_id": "tannery_vats",
+      "interaction": "Elara breaks down in tears, confessing the footprints are from her brother, Thomas, who is alive and hiding.",
+      "description": "Elara reveals the core secret: her brother, Thomas, whom the town believes is dead, is actually alive and in hiding.",
+      "what_it_implies": "The 'ghost' is a living person. The entire town is involved in a conspiracy to fake his death.",
+      "key_for_progress": true
+    },
+    {
+      "id": "empty_casket_funeral",
+      "label": "The Empty Casket",
+      "anchor_id": "churchyard_lychgate",
+      "interaction": "A shamed Brother Finnian admits he performed a funeral service for the tanner's boy over an empty casket.",
+      "description": "Brother Finnian confesses his role in the conspiracy: he presided over a fake funeral with an empty casket to make the death seem official.",
+      "what_it_implies": "The town's leadership, including the church, is deeply and formally involved in the cover-up.",
+      "key_for_progress": true
+    },
+    {
+      "id": "price_of_a_loose_tongue",
+      "label": "Price of a Loose Tongue",
+      "anchor_id": "the_stocks",
+      "interaction": "Rowan's voice becomes a low threat, stating the last Watchman 'learned the price of a loose tongue in Brackenford'.",
+      "description": "The blacksmith, Rowan, implicitly threatens you by stating that your predecessor was silenced for asking too many questions.",
+      "what_it_implies": "The last Watchman was murdered by Rowan to protect the town's secret, and the same fate awaits you if you expose it.",
+      "key_for_progress": true
+    },
+    {
+      "id": "whispered_warning",
+      "label": "The Whispered Warning",
+      "anchor_id": "market_cross",
+      "interaction": "The Reeve drops all pretense, explaining the whispers you heard weren't a ghost, but Thomas trying to warn you away.",
+      "description": "Reeve Gable reveals the whispers were Thomas trying to warn you away. Gable explains Thomas overheard him assigning your duties on your first night and feared for your life.",
+      "what_it_implies": "The hidden man is not a threat, but a victim who fears for your life because he knows what happened to your predecessor.",
+      "key_for_progress": true
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter_1",
+      "title": "The Ghost Story",
+      "narration": "The night air in Brackenford is thick with woodsmoke and suspicion. You are the new Watch, a stranger hired to walk the dark, and every shadow seems to hold a whisper. The townsfolk watch you from behind shuttered windows. They say your predecessor fled. They say a ghost haunts the well. Your first patrol begins under a sliver of moon.",
+      "event_beats": [
+        "Old Man Hemlock spins a wild tale of a 'Well Maiden' ghost, pointing to damp earth with a little too much enthusiasm.",
+        "Agnes, the widow at the bell tower, sighs that the bell rope is too frayed to ring a proper peal, a cost she cannot bear.",
+        "The Reeve welcomes you with a formal chill, stressing that Brackenford's 'spiritual matters' are best left to its own people.",
+        "At the stocks, the blacksmith scoffs at your questions, muttering that the last Watchman was a drunkard who simply ran off."
+      ],
+      "spotlight_npc_ids": [
+        "old_man_hemlock",
+        "agnes_the_widow"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "bell_tower_base",
+        "market_cross",
+        "the_stocks",
+        "churchyard_lychgate",
+        "tannery_vats"
+      ],
+      "available_clue_ids": [
+        "well_maiden_story",
+        "frayed_bell_rope"
+      ],
+      "entry_require_all_clues": [],
+      "entry_require_any_clues": [],
+      "exit_require_all_clues": [
+        "well_maiden_story",
+        "frayed_bell_rope"
+      ],
+      "transition_player_hook": "The chilling tale of the ghost hangs in the air, a story only two people truly own. You must find Old Man Hemlock, the tale's bitter author, and Agnes, the widow whose grief supposedly summoned the spirit. Their conflicting stories hold the first real clue."
+    },
+    {
+      "id": "chapter_2",
+      "title": "The Cover-Up",
+      "narration": "The official story feels thin, like a worn blanket that fails to cover what lies beneath. The townsfolk's answers create more questions. Their feigned ignorance has the weight of a shared secret. You sense you are not investigating a ghost, but the reason for its invention.",
+      "event_beats": [
+        "Hemlock, when pressed, lets slip that the well has been dry for a year, directly contradicting his own ghost story.",
+        "The blacksmith, Rowan, changes his story. He now claims the last Watchman wasn't just a drunk, but was asking questions about the 'tanner's boy'.",
+        "Elara, the tanner's girl, is jumpy and evasive, but her fear cracks enough for her to mention a recent 'tragedy'.",
+        "Brother Finnian speaks cryptically of mercy, suggesting that some sins are better hidden from the law than brought to light."
+      ],
+      "spotlight_npc_ids": [
+        "blacksmith_rowan",
+        "elara_the_tanners_girl"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "bell_tower_base",
+        "market_cross",
+        "the_stocks",
+        "churchyard_lychgate",
+        "tannery_vats"
+      ],
+      "available_clue_ids": [
+        "watchman_asked_questions",
+        "tannery_tragedy"
+      ],
+      "entry_require_all_clues": [
+        "well_maiden_story",
+        "frayed_bell_rope"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "watchman_asked_questions",
+        "tannery_tragedy"
+      ],
+      "transition_player_hook": "A ghost who leaves footprints? A single toll from a \"broken\" bell? You sense these aren't accidents, but lies. Blacksmith Rowan deals in hard iron, not flimsy stories about rope\u2014he\u2019ll know the bell's true state. As for the footprints, perhaps the elusive Elara knows who walks in the dark."
+    },
+    {
+      "id": "chapter_3",
+      "title": "The Conspiracy",
+      "narration": "The lies are unraveling. The fear in their eyes is no longer for a ghost, but for you. You feel the town's collective will turning against you, a silent, crushing pressure. The truth is close, and it feels dangerous. One final push is all it will take.",
+      "event_beats": [
+        "Elara finally breaks, confessing the footprints by the well are her brother's; he's alive and in hiding.",
+        "Confronted with proof the boy lives, Agnes admits the bell isn't for spirits, but a signal to warn him of your approach.",
+        "Brother Finnian, his piety cracking, confesses to presiding over a funeral for an empty casket to cement the lie.",
+        "The blacksmith's tone becomes a threat, warning that the last Watchman 'learned the price of a loose tongue'.",
+        "The Reeve drops all pretense, revealing the whispered name was a warning from the hidden man. 'He overheard me giving you your duties on your first night,' he says."
+      ],
+      "spotlight_npc_ids": [
+        "brother_finnian",
+        "reeve_gable"
+      ],
+      "available_anchor_ids": [
+        "town_well",
+        "bell_tower_base",
+        "market_cross",
+        "the_stocks",
+        "churchyard_lychgate",
+        "tannery_vats"
+      ],
+      "available_clue_ids": [
+        "empty_casket_funeral",
+        "whispered_warning"
+      ],
+      "entry_require_all_clues": [
+        "watchman_asked_questions",
+        "tannery_tragedy"
+      ],
+      "entry_require_any_clues": null,
+      "exit_require_all_clues": [
+        "empty_casket_funeral",
+        "whispered_warning"
+      ],
+      "transition_player_hook": "The missing watchman's investigation and Elara's \"tragedy\" are two sides of a dark coin. A conspiracy is taking shape. Who enforces the town's laws, and who tends to its soul? Reeve Gable and Brother Finnian have answers they don't want to give. You must confront them."
+    }
+  ],
+  "npcs": [
+    {
+      "id": "old_man_hemlock",
+      "name": "Old Man Hemlock",
+      "role": "Town elder and self-appointed keeper of folklore.",
+      "anchor_id": "town_well",
+      "pose": "standing",
+      "vibe": "A stooped man in a threadbare woolen tunic, leaning on a gnarled staff. His eyes are sharp and constantly moving, enjoying the attention he commands.",
+      "public_face": "The harmless, slightly dotty town historian who loves spinning a yarn for anyone who will listen, especially about local ghosts and legends.",
+      "private_truth": "He knows the ghost story is a complete fabrication designed to protect the tanner's boy, Thomas. He is a key and willing participant in the town's conspiracy of silence.",
+      "protected_truth": "His own role as the creator of the 'Well Maiden' myth. He isn't just repeating a story; he actively invented it to misdirect outsiders and feels a paternal duty to uphold it.",
+      "misleading_claim": "The footprints by the well? Ah, that's the Well Maiden, a poor girl who drowned here generations ago. She walks on moonless nights, forever searching.",
+      "voice_style": "Winding and theatrical, full of dramatic pauses. Becomes short, grim, and paternal when his story is seriously challenged.",
+      "lie_style": "Elaboration and misdirection. He buries the truth under layers of contradictory folklore and feigned senility, making it hard to pin him down on any single fact.",
+      "pressure_points": "Questioning the specifics of the ghost story, pointing out contradictions, asking why a ghost would need a dry well.",
+      "baseline": {
+        "trust": 1,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Performs as the town's storyteller, enjoying the control his narrative gives him over a newcomer.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To establish the 'Well Maiden' ghost story as the official explanation, deterring further investigation.",
+          "how_they_treat_player": "As a fresh audience member; a mixture of patronizing charm and theatricality. He sees the player as a simple outsider to be managed.",
+          "what_they_offer": "A complete, self-contained supernatural narrative (the 'Well Maiden' story) that conveniently explains away any unsettling questions.",
+          "what_they_refuse": "To entertain any logical flaws in his story or admit to any uncertainty. He deflects all fact-based questions with folklore.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Ah, the new Watch! Come, warm yourself by an old man's tale. This well has stories to tell, if you've the ears to listen.",
+            "evasive": "Details, details... a ghost doesn't keep a diary, you know. She comes, she goes, like the mist on the moors.",
+            "pressured": "You ask too many questions for a simple tale! It's folklore, not a legal document. Have you no poetry in your soul?",
+            "reveal": "The footprints? Why, that's the Well Maiden, of course! A poor girl who drowned here. She walks on moonless nights, forever searching."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "His theatrical persona cracks under pressure, revealing a grim, defensive protector. He becomes flustered and annoyed by pointed questions.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "Player must point out the direct contradiction of a ghost story at a well that has been dry for a year.",
+          "goal": "To patch the holes in his failing story and shut down new lines of inquiry, especially concerning the tannery.",
+          "how_they_treat_player": "As a persistent threat to the town's secret. His charm evaporates, replaced by irritation and curt dismissals.",
+          "what_they_offer": "Accidental contradictions. He lets slip that the well is dry, hoping to explain it away with more spiritual nonsense.",
+          "what_they_refuse": "To connect the ghost story to any real-world events, especially the 'tannery tragedy' or the former Watchman's investigations.",
+          "reacts_to_clues_any": [
+            "tannery_tragedy",
+            "watchman_asked_questions"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You again. Still chasing shadows? Some things are best left undisturbed.",
+            "evasive": "Dry now, yes. But spirits aren't bound by such... earthly plumbing, are they? Her memory makes the ground damp!",
+            "pressured": "The tanner's business is their own! This has naught to do with a restless spirit. You're mixing up stories, that's what!",
+            "reveal": "Dry? Of course it's been dry for a year! What does that matter? It's the *place* of the drowning that holds her, not the water!"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "The storyteller is gone. He is a tired, desperate old man, pleading his town's case and confessing his role as the myth-maker.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must present the 'brother_in_hiding' clue, shattering the entire conspiracy.",
+          "goal": "To convince the player of the moral rightness of the conspiracy and secure their silence, ensuring the boy's continued safety.",
+          "how_they_treat_player": "As a judge and jury. He drops all artifice and speaks with grim honesty, appealing to the player's sense of mercy.",
+          "what_they_offer": "The final truth: a confession that he invented the 'Well Maiden' myth from whole cloth specifically to protect the tanner's boy.",
+          "what_they_refuse": "To reveal the boy's location or to apologize for the deception. He stands by the morality of his actions, not the method.",
+          "reacts_to_clues_any": [
+            "empty_casket_funeral"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "I was wondering when you'd be back. So, you know. Let's have it, then.",
+            "evasive": "There's no point in tales anymore. The story is over. What matters is what you do now.",
+            "pressured": "Don't you dare judge us! You weren't here. What would you have done? Let the law hang a child for an accident?",
+            "reveal": "The Well Maiden? There is no maiden. I made her up. Every last word. I gave them a ghost so they wouldn't have to look at a grave."
+          }
+        }
+      ]
+    },
+    {
+      "id": "reeve_gable",
+      "name": "Reeve Gable",
+      "role": "The town's chief official, responsible for law and administration.",
+      "anchor_id": "market_cross",
+      "pose": "standing",
+      "vibe": "A man in his fifties, wearing a well-made but practical doublet. He stands with an air of weary authority, his expression carefully neutral and unreadable.",
+      "public_face": "The pragmatic and burdened leader trying to maintain peace in an isolated town. He presents himself as the player's employer and a reasonable ally.",
+      "private_truth": "He orchestrated the entire cover-up of Thomas's crime and faked death to prevent a devastating reprisal from the slain nobleman's powerful family.",
+      "protected_truth": "His direct complicity in the murder of the previous Watchman, which he sanctioned as a necessary evil to save the town from exposure.",
+      "misleading_claim": "Brackenford handles its own 'spiritual matters.' The last Watchman was a superstitious man who fled; the role is not for the faint of heart.",
+      "voice_style": "Measured, formal, and diplomatic. Uses bureaucratic language to create distance. Becomes cold and direct when making his final, threatening offer.",
+      "lie_style": "Dismissal and minimization. He frames serious concerns as trivial folklore or administrative annoyances, attempting to stall and manage the player's investigation.",
+      "pressure_points": "His authority, the town's 'independence,' the fate of the last Watchman, any suggestion of a coordinated conspiracy.",
+      "baseline": {
+        "trust": 2,
+        "pressure": 0
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Maintains a formal, authoritative distance, treating the player as a subordinate with a very limited mandate.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To establish the player's role as purely functional (a guard) and steer them away from investigating local 'folklore'.",
+          "how_they_treat_player": "He is your employer, not your confidant. He is polite but dismissive, setting firm boundaries on your authority.",
+          "what_they_offer": "A clear, if limited, job description and a steady wage. He offers the illusion of being a reasonable authority figure.",
+          "what_they_refuse": "He refuses to acknowledge the 'Well Maiden' story as anything more than peasant superstition or to discuss the previous Watchman's fate.",
+          "reacts_to_clues_any": [
+            "well_maiden_story",
+            "frayed_bell_rope"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You are the new Watch. I am Reeve Gable. Your duties are simple: walk the patrol, keep the peace. Understood?",
+            "evasive": "Every isolated town has its ghost stories. They are of no concern to the administration of Brackenford.",
+            "pressured": "Your predecessor was not suited to the realities of this post. He saw phantoms where there was only mud.",
+            "reveal": "Let me be clear. You are here to deter poachers and vagrants, not to chase shadows. Stick to your duties."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "His professional veneer is strained. He uses bureaucratic language and his official position to shut down uncomfortable questions.",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "To halt the player's investigation by discrediting new information and reasserting his authority.",
+          "how_they_treat_player": "With growing impatience and veiled warnings. The player is no longer a simple employee, but a complication to be managed.",
+          "what_they_offer": "Warnings disguised as fatherly advice. An offer to 'handle the matter internally' if the player drops it.",
+          "what_they_refuse": "To discuss the previous Watchman's specific questions or the 'tannery tragedy' in any meaningful way.",
+          "reacts_to_clues_any": [
+            "watchman_asked_questions",
+            "tannery_tragedy"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Watch. I trust you are finding your patrols... uneventful.",
+            "evasive": "The affairs of the tanner's family are their own. It is not our place to pry into private grief.",
+            "pressured": "The last Watchman meddled in things that were not his concern. It led to his... departure. A lesson to be heeded.",
+            "reveal": "Your persistence is becoming a disruption. I am ordering you to cease this line of inquiry. It is a matter of town security."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "He drops all pretense. He is cold, pragmatic, and in control, speaking to the player as a dangerous equal.",
+          "tension_state": "Negotiating",
+          "reveal_cost": "Full reveal only occurs when player presents evidence of the conspiracy, forcing the Reeve's hand. The cost is being implicated.",
+          "goal": "To force the player into complicity, either through bribery or threat, ensuring the town's secret is kept.",
+          "how_they_treat_player": "He treats the player as a piece on the board to be moved. The choice he offers is an ultimatum, not a negotiation between equals.",
+          "what_they_offer": "A choice: a permanent, well-paid, and complicit role in the town's leadership, or a shallow grave.",
+          "what_they_refuse": "To allow the player to leave with the truth. He will not allow an outside authority to be brought in.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "empty_casket_funeral",
+            "whispered_warning"
+          ],
+          "sample_lines": {
+            "greeting": "I've been expecting you. It seems we have a great deal to discuss.",
+            "evasive": "There is no more room for evasion. You have been thorough. Too thorough.",
+            "pressured": "Do not mistake this for a confession. This is a job offer. Your predecessor declined it.",
+            "reveal": "The whisper was Thomas. He overheard me hiring you. A warning. We killed the last Watchman for ignoring it. Now you know. Join us, or join him."
+          }
+        }
+      ]
+    },
+    {
+      "id": "brother_finnian",
+      "name": "Brother Finnian",
+      "role": "The town's parish priest.",
+      "anchor_id": "churchyard_lychgate",
+      "pose": "standing",
+      "vibe": "A lean, ascetic man in a simple brown cassock. His face is lined with worry, and he often clutches a wooden rosary, his gaze directed slightly downwards.",
+      "public_face": "A pious and troubled man of God, concerned for the spiritual well-being of his flock and wary of worldly interference in divine matters.",
+      "private_truth": "He knowingly presided over a funeral for Thomas with an empty casket, giving a false eulogy to legitimize the official story of his death.",
+      "protected_truth": "His personal justification for his actions as a form of 'pastoral care'\u2014that lying was a greater mercy than allowing the law to destroy a boy and his family. He fears damnation for it.",
+      "misleading_claim": "The town is troubled by an unquiet spirit. It is a sin to disturb the dead, and God's justice is not for mortals to meddle with.",
+      "voice_style": "Soft-spoken and abstract, using religious parables and theological arguments. Becomes pleading and desperate when his role is exposed.",
+      "lie_style": "Theological misdirection. He reframes the cover-up in terms of sin, mercy, and divine will, attempting to make the investigation seem impious.",
+      "pressure_points": "The sanctity of a funeral, the sin of bearing false witness, the conflict between God's law and man's law, the specifics of Thomas's 'death'.",
+      "baseline": {
+        "trust": 1,
+        "pressure": 1
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Adopts a posture of spiritual concern, warning the player away from worldly matters and the disturbance of the dead.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To frame the town's problem as a spiritual one, not a legal one, and to test the player's piety.",
+          "how_they_treat_player": "With gentle, condescending piety. He treats the player as a worldly outsider who cannot grasp the town's spiritual troubles.",
+          "what_they_offer": "Vague spiritual warnings and his misleading claim that the town is troubled by an unquiet spirit, a matter for God, not the law.",
+          "what_they_refuse": "Any practical information. He deflects all specific questions into abstract lessons about faith and sin.",
+          "reacts_to_clues_any": [
+            "well_maiden_story",
+            "frayed_bell_rope"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "A new Watchman. Pray you bring peace to this town, and not stir what is best left buried.",
+            "evasive": "Some things are between a soul and its maker. It is not for us to judge them by the cold letter of the law.",
+            "pressured": "You speak of facts and evidence. I speak of the soul's peril. Our concerns are not the same.",
+            "reveal": "This town's affliction is not for the law, but for the Lord. It is a sin to disturb the dead."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "He doubles down on theological misdirection, arguing that divine mercy is a higher virtue than secular law.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To convince the player that abandoning the investigation is a morally superior act of mercy.",
+          "how_they_treat_player": "As a moral obstacle. He sees the player's investigation as a cruel, legalistic intrusion that will cause more harm than good.",
+          "what_they_offer": "A philosophical justification for stopping the investigation, framed as the 'mercy_over_law' clue.",
+          "what_they_refuse": "Any specifics about the 'tragedy' or the 'sins' he alludes to. He will not name names or events.",
+          "reacts_to_clues_any": [
+            "watchman_asked_questions",
+            "tannery_tragedy"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You return. I had hoped you would find your peace with this matter.",
+            "evasive": "Is it justice to destroy a family for the sake of a rule? Some wounds are not meant to be reopened by mortal hands.",
+            "pressured": "You are relentless! The law you serve is a blunt instrument. Can it not see the difference between sin and mercy?",
+            "reveal": "Sometimes, the greatest act of pastoral care is to shield a soul from a justice that is blind to grace."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "His composure is gone. He is cornered, fearing for his own soul and the consequences of the conspiracy's collapse.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Confront him with the 'brother_in_hiding' clue, which proves the boy is alive and makes the funeral an obvious lie.",
+          "goal": "To make one last, failing attempt to justify his actions before breaking down and confessing everything.",
+          "how_they_treat_player": "As his confessor or his judge. His piety is replaced by raw fear and pleading for understanding.",
+          "what_they_offer": "The full confession that he presided over a funeral for an empty casket, which provides the 'empty_casket_funeral' clue.",
+          "what_they_refuse": "At first, he refuses to discuss the funeral at all, calling it a sacred rite that the player is profaning.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [],
+          "sample_lines": {
+            "greeting": "Please... leave me to my prayers. There is nothing more to say that will not lead to ruin.",
+            "evasive": "A funeral is sacred! You cannot... you must not profane that holy service with these accusations!",
+            "pressured": "God have mercy... You don't know what you ask! To speak of it is a sin! To have done it... it may be damnation.",
+            "reveal": "Yes! The casket was empty! I blessed a box of stones and dirt! I lied before God and this town to save that boy. Is that the truth you wanted?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blacksmith_rowan",
+      "name": "Blacksmith Rowan",
+      "role": "The town blacksmith and unofficial enforcer.",
+      "anchor_id": "the_stocks",
+      "pose": "standing",
+      "vibe": "A large, powerful man with soot-stained hands and a leather apron. His arms are crossed, and he watches the player with open suspicion and contempt.",
+      "public_face": "A gruff, hardworking craftsman who dislikes outsiders and authority. He seems cynical and unimpressed by the player's role as Watchman.",
+      "private_truth": "He is the muscle for the conspiracy. He intimidated the last Watchman and, when that failed, killed him and disposed of the body on the Reeve's orders.",
+      "protected_truth": "The fact that he is a murderer. He will threaten and intimidate to protect this secret, as its revelation means his own execution.",
+      "misleading_claim": "The last Watchman? A coward and a drunk. Stole some coin and ran off the first time he heard a strange noise in the dark. Good riddance.",
+      "voice_style": "Short, gruff, and concrete. Uses insults and challenges. His sentences are clipped and dismissive.",
+      "lie_style": "Aggressive misdirection and character assassination. He tries to discredit anyone who threatens the conspiracy, including the player and their predecessor.",
+      "pressure_points": "His own strength, the fate of the last Watchman, any mention of violence or threats, his relationship with Reeve Gable.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 1
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Dismissive and contemptuous, treating the player as a naive fool.",
+          "tension_state": "Misdirecting",
+          "reveal_cost": null,
+          "goal": "To discredit the previous Watchman and dismiss the player's investigation as a waste of time by pushing the 'drunken coward' narrative.",
+          "how_they_treat_player": "With open scorn. He sees the player as another temporary annoyance and makes no effort to hide it.",
+          "what_they_offer": "A simple, dismissive lie: the last Watchman was a drunk who ran off. This lie becomes the `drunken_watchman_rumor` clue.",
+          "what_they_refuse": "To entertain any other possibility for the Watchman's disappearance or to show the player any respect.",
+          "reacts_to_clues_any": [
+            "well_maiden_story"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Another Watchman. Don't get comfortable.",
+            "evasive": "Worried about ghosts? You won't last the week. The last one was a drunk, not a hero. He ran.",
+            "pressured": "Ask all you want. The story's the same. He was a coward. End of it. Now get out of my sight.",
+            "reveal": "The 'truth'? The truth is this town doesn't need your kind. He learned that. So will you."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Shifts from pure dismissal to calculated misdirection, offering a new lead to control the narrative.",
+          "tension_state": "Testing the player",
+          "reveal_cost": null,
+          "goal": "To redirect the investigation towards the 'tanner's boy' tragedy, framing the previous Watchman as a meddler.",
+          "how_they_treat_player": "Slightly less dismissive, more like he's sharing a 'hard truth' with a naive outsider. It's a performance of cynical wisdom.",
+          "what_they_offer": "A new, more complex lie: the Watchman was nosing around the tannery tragedy. This creates the `watchman_asked_questions` clue.",
+          "what_they_refuse": "To discuss his own role, his relationship with the Reeve, or any details about the Watchman beyond this new narrative.",
+          "reacts_to_clues_any": [
+            "tannery_tragedy"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You again. Still chasing shadows?",
+            "evasive": "He wasn't just a drunk. He was a meddler. Some things... some tragedies... are best left alone.",
+            "pressured": "The tanner's boy. He was asking questions there. Stirring up grief. That's the kind of man he was.",
+            "reveal": "Fine. You want to know what he was doing? Poking his nose into a family's private pain. Satisfied?"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Drops all pretense of misdirection and adopts a posture of pure, unveiled threat.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": "Player must present clues that prove the conspiracy (`empty_casket_funeral`, `brother_in_hiding`), cornering him completely.",
+          "goal": "To intimidate the player into silence or flight through the explicit threat of violence, mirroring the fate of the last Watchman.",
+          "how_they_treat_player": "With undisguised menace. He is no longer a cynical townsman; he is an enforcer and a killer.",
+          "what_they_offer": "A direct threat and a warning. He implies he was responsible for the last Watchman's fate, creating the `price_of_a_loose_tongue` clue.",
+          "what_they_refuse": "To confess to the murder outright. He will threaten and imply, but never admit the act itself.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": [
+            "empty_casket_funeral"
+          ],
+          "sample_lines": {
+            "greeting": "You've pushed far enough.",
+            "evasive": "You think you're clever, figuring things out. You're not clever. You're careless.",
+            "pressured": "The last one learned the price of a loose tongue. A lesson some people only learn once.",
+            "reveal": "He didn't run. He was dealt with. Just like you'll be, if you don't walk away. Right now. This is your only warning."
+          }
+        }
+      ]
+    },
+    {
+      "id": "agnes_the_widow",
+      "name": "Agnes, the Widow",
+      "role": "The bell-ringer's widow, now responsible for the church bell.",
+      "anchor_id": "bell_tower_base",
+      "pose": "standing",
+      "vibe": "A pale, weary woman in a simple dark dress and wimple. She seems perpetually distracted by grief, avoiding eye contact and wringing her hands.",
+      "public_face": "A grieving widow struggling to manage her late husband's duties, overwhelmed by poverty and loss. She seems fragile and pitiable.",
+      "private_truth": "She rings the bell once every night at a specific time as an 'all clear' signal for Thomas, letting him know it's safe to come out for the food left at the well.",
+      "protected_truth": "The bell's true purpose as a signal. She will protect this fact to the end, as it directly connects her to the conspiracy and endangers Thomas.",
+      "misleading_claim": "The bell only rings once because the rope is old and frayed. I haven't the coin to have it replaced. It's a miracle it rings at all.",
+      "voice_style": "Quiet, hesitant, and sorrowful. Her speech is fragmented, often trailing off. Becomes defensive and emotional when pressed.",
+      "lie_style": "Emotional smokescreen. She uses her grief and feigned poverty to evoke pity and guilt, making the player feel cruel for questioning her.",
+      "pressure_points": "Her late husband's honor, the state of the bell rope, the specific timing of the single toll, her financial situation.",
+      "baseline": {
+        "trust": 1,
+        "pressure": 2
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Performs her role as a fragile, grieving widow, using her poverty and sorrow as a shield against probing questions.",
+          "tension_state": "Concealing",
+          "reveal_cost": null,
+          "goal": "Convince the player that the single bell toll is due to a frayed rope and her poverty, thus ending their inquiry.",
+          "how_they_treat_player": "With weary distraction, as if the player is an unwelcome interruption to her private grief. She makes the player feel cruel for pressing her.",
+          "what_they_offer": "The misleading clue that the bell rope is too frayed and expensive to replace, explaining the single nightly toll.",
+          "what_they_refuse": "To discuss the bell's timing, her late husband's work in detail, or any other town matters. She claims to be too overwhelmed by grief.",
+          "reacts_to_clues_any": [
+            "well_maiden_story"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Oh... another Watchman. May your service be peaceful. I must see to my duties.",
+            "evasive": "It's... difficult. My Robert, he knew its ways. The rope is old. I do what I can.",
+            "pressured": "Please, I am a widow in mourning. Must you question me so? It is all I can manage.",
+            "reveal": "The rope is frayed, you see. I haven't the coin to replace it. It's a mercy it rings at all."
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Her grief seems more brittle, laced with fear. She becomes defensive when any topic beyond the bell is raised.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To deflect any connection between her, the bell, the previous Watchman, or the 'tannery tragedy'.",
+          "how_they_treat_player": "With growing fear and suspicion. She sees the player not as a helper, but as a threat to the town's fragile secret.",
+          "what_they_offer": "Nothing but reinforcement of her original lie. She may offer prayers or platitudes about the town's tragedies to appear pious and uninvolved.",
+          "what_they_refuse": "To acknowledge knowing anything about the previous Watchman's questions or the specifics of the tannery incident.",
+          "reacts_to_clues_any": [
+            "watchman_asked_questions",
+            "tannery_tragedy"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You're back. I have told you all I know.",
+            "evasive": "The tanner's family has suffered a great loss. I pray for them, as we all do. I know no more than that.",
+            "pressured": "Why do you keep asking me these things? I am a simple woman! I know nothing of the last Watchman's affairs!",
+            "reveal": "I told you, the rope is frayed! That is all there is to it! Please, leave me in peace!"
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Cornered and terrified, her performance of grief shatters, revealing raw desperation to protect the secret.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Player must confront her with the 'brother_in_hiding' clue.",
+          "goal": "To sell a new lie\u2014that the bell signal wards off evil spirits\u2014to stop the player from discovering its true purpose.",
+          "how_they_treat_player": "As an immediate and dangerous threat. She will plead, deflect, and lie with frantic energy to protect the conspiracy.",
+          "what_they_offer": "A partial confession: the single toll is a deliberate signal. This is immediately followed by a new lie about its purpose (warding evil).",
+          "what_they_refuse": "To reveal who the signal is for. She will protect Thomas's identity to the very end, unless her reveal_cost is met.",
+          "reacts_to_clues_any": [],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Go away! I have nothing for you!",
+            "evasive": "The timing? It is... a prayer. For the town's troubled soul. A prayer against the dark.",
+            "pressured": "Alright! Stop! It's not the rope! I ring it to keep the evil away! The ghost... the whispers... it's a ward! Are you satisfied?",
+            "reveal": "It's for the boy. Thomas. So he knows it's safe to come out for the food we leave him. Now you know. What will you do to us?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "elara_the_tanners_girl",
+      "name": "Elara",
+      "role": "The tanner's daughter, sister of the 'dead' boy.",
+      "anchor_id": "tannery_vats",
+      "pose": "standing",
+      "vibe": "A young woman, barely out of her teens, in stained work clothes. She is gaunt and jumpy, her eyes wide with a terror she can barely contain.",
+      "public_face": "A terrified, overworked girl trying to keep her family's business afloat after a recent 'tragedy.' She uses the foul smell as a reason to keep people away.",
+      "private_truth": "She knows her brother Thomas is alive and in hiding nearby. She is the one who secretly leaves food and water for him at the well each night.",
+      "protected_truth": "That her brother is alive. This is the core secret of the entire conspiracy, and she protects it out of love and terror of what will happen if he's found.",
+      "misleading_claim": "There was... a terrible accident. My family is grieving. Please, I have too much work to do to talk. The smell... please go.",
+      "voice_style": "Short, panicked, and evasive. She speaks in whispers and often looks over her shoulder. Her sentences are incomplete and breathless.",
+      "lie_style": "Deflection through raw fear and grief. She acts so terrified and overwhelmed that engaging with her feels like tormenting a victim, making it difficult to press for details.",
+      "pressure_points": "Her brother, the 'accident,' the footprints at the well, the food left out at night, the previous Watchman's questions.",
+      "baseline": {
+        "trust": 0,
+        "pressure": 3
+      },
+      "chapter_states": [
+        {
+          "chapter_id": "chapter_1",
+          "stance": "Uses the foul smell of the tannery and feigned, overwhelming grief to push the player away and avoid any questions about her family.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To make the player leave immediately by appearing too grief-stricken and overwhelmed to speak.",
+          "how_they_treat_player": "With panicked avoidance. She will not make eye contact and her body language screams 'leave me alone'.",
+          "what_they_offer": "Nothing but the foul smell and a plea to be left to her work and her 'grief'.",
+          "what_they_refuse": "To discuss her family, any recent events, or anything beyond her immediate task.",
+          "reacts_to_clues_any": null,
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "Please... the smell... you shouldn't be here. I have work.",
+            "evasive": "I can't talk. Not now. There's been... it's too much.",
+            "pressured": "Why are you asking me this? Just leave us be! Can't you see we're suffering?",
+            "reveal": "There's nothing to tell! It was an accident! Now go!"
+          }
+        },
+        {
+          "chapter_id": "chapter_2",
+          "stance": "Her facade of simple grief is cracking under pressure. She is visibly terrified that the player knows something and is no longer buying her act.",
+          "tension_state": "Protecting someone",
+          "reveal_cost": null,
+          "goal": "To give the player a piece of the truth\u2014the 'tannery tragedy'\u2014hoping it's enough to satisfy them and make them stop digging.",
+          "how_they_treat_player": "Still jumpy and fearful, but now she watches the player with wary calculation, trying to gauge what they know.",
+          "what_they_offer": "Under pressure, she will offer the 'tannery_tragedy' clue as a controlled leak of information.",
+          "what_they_refuse": "Any details about the 'tragedy,' the previous Watchman, or her brother's specific fate.",
+          "reacts_to_clues_any": [
+            "watchman_asked_questions"
+          ],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "You again... I told you, there's nothing...",
+            "evasive": "The last Watchman? I... I don't know anything about him. He just asked questions, that's all.",
+            "pressured": "Alright! Yes! There was a tragedy! Here, at the tannery! Is that what you want to hear? Now please, leave me alone.",
+            "reveal": "It was my brother... Thomas. There was... an accident with the vats. It was horrible."
+          }
+        },
+        {
+          "chapter_id": "chapter_3",
+          "stance": "Cornered by contradictions, she sees the player knows too much and her attempts to protect her brother are failing.",
+          "tension_state": "Desperate",
+          "reveal_cost": "Confronting her with the 'dry_well_contradiction' clue, which makes her nightly visits impossible to explain away.",
+          "goal": "To confess her brother is alive, hoping the player will show mercy rather than expose the conspiracy and endanger Thomas.",
+          "how_they_treat_player": "A volatile mix of pleading and terror. She sees the player as both her tormentor and her only possible salvation.",
+          "what_they_offer": "The core truth of the entire mystery: her brother is alive and in hiding (`brother_in_hiding` clue).",
+          "what_they_refuse": "Initially, to admit anything. After confessing, she will refuse to say where he is, only that he is nearby.",
+          "reacts_to_clues_any": [],
+          "reacts_to_clues_all": null,
+          "sample_lines": {
+            "greeting": "(sobbing quietly) Just... say what you have to say. Get it over with.",
+            "evasive": "The well... it's dry? I... I didn't know. I just go there sometimes. To pray. For him.",
+            "pressured": "Stop it! You don't know what you're doing! You'll get him killed! You'll get us all killed!",
+            "reveal": "He's alive! My brother, Thomas... he's alive. We faked it. The funeral, all of it. He's hiding. Please... you have to help us."
+          }
+        }
+      ]
+    }
+  ],
+  "ending": {
+    "title": "The Watchman's Choice",
+    "trigger": {
+      "chapter_id": "chapter_3",
+      "requires_all_clues": [
+        "empty_casket_funeral",
+        "whispered_warning"
+      ]
+    },
+    "black_screen_text": "The Reeve's words hang in the cold air, heavier than the blacksmith's hammer. The truth is a weapon, and now you hold it. You can accept their tainted silver, becoming another shadow in Brackenford's conspiracy of silence, your patrols a hollow charade. Or you can refuse, and join your predecessor in a shallow, unmarked grave. The town holds its breath, waiting for your answer. Your life is no longer your own; it is a secret to be kept or a price to be paid.",
+    "open_thread": "You know the town protected the boy, but the fate of the last Watchman remains Brackenford's darkest secret."
+  },
+  "quality_report": {
+    "overall_score": 94,
+    "subscores": {
+      "coherence": 10,
+      "pacing": 9,
+      "clue_fairness": 9,
+      "npc_distinctness": 10,
+      "solvability": 10,
+      "player_agency": 9,
+      "tension": 10,
+      "voice_distinctness": 10,
+      "anomaly_over_exposition": 10,
+      "engagement": 9
+    },
+    "strengths": [
+      "NPCs are exceptionally well-defined with distinct voices, motives, and active situations, perfectly matching the Infocom philosophy.",
+      "The core mystery is built on compelling anomalies (the dry well, the single bell toll) rather than exposition, creating strong player curiosity.",
+      "The three-chapter structure provides excellent escalating tension, moving from a supernatural mystery to a deadly conspiracy.",
+      "The twist that the whispered name is a warning for the player is clever, and the final choice presented by the Reeve is a powerful, earned conclusion.",
+      "NPC situations (Concealing, Negotiating, Desperate) are active and create natural, escalating conflict, avoiding passive info-dumps."
+    ],
+    "problems": [
+      {
+        "severity": "medium",
+        "issue": "A key clue, 'dry_well_contradiction', is discovered in Chapter 2 but is not required to exit it. However, it is the required 'reveal_cost' for Elara's confession in Chapter 3, creating a potential dead-end if missed.",
+        "fix": "Add 'dry_well_contradiction' to the 'exit_require_all_clues' array for Chapter 2. This ensures the player has the necessary information to logically progress and solve the final chapter."
+      },
+      {
+        "severity": "low",
+        "issue": "Agnes's Chapter 3 sample line reveals Thomas's name directly, but her dialogue should only reach that point after the player confronts her with the 'brother_in_hiding' clue. Her initial confession should be more guarded.",
+        "fix": "Adjust Agnes's final reveal line. Instead of saying 'It's for the boy. Thomas...', she should first confess the signal's purpose more vaguely, e.g., 'It's a signal. For him. So he knows it's safe.' The name 'Thomas' should only be used after the player proves they already know it."
+      }
+    ]
+  },
+  "validation_report": {
+    "ok": true,
+    "issues": []
+  }
+}

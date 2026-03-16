@@ -1,0 +1,15 @@
+[Unit]
+Description=Narrative Engine Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Narrator_engine
+Environment=PROJECT_ROOT=/home/ubuntu/Narrator_engine
+ExecStart=/bin/bash -c 'set -a && . /home/ubuntu/Narrator_engine/narrative_server/.env && set +a && cd /home/ubuntu/Narrator_engine && exec /home/ubuntu/Narrator_engine/venv/bin/python3 -m uvicorn narrative_server.main:app --host 0.0.0.0 --port 8000'
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

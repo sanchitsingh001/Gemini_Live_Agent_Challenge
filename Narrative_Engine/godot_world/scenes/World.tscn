@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8j4k5l6m7n8"]
+
+[ext_resource type="Script" path="res://scripts/world_loader.gd" id="1_loader"]
+[ext_resource type="Script" path="res://scripts/game_ui_layers.gd" id="8_ui"]
+[ext_resource type="Script" path="res://scripts/weather_manager.gd" id="2_weather"]
+[ext_resource type="Script" path="res://scripts/day_night_cycle.gd" id="3_daynight"]
+[ext_resource type="PackedScene" uid="uid://settings_menu_001" path="res://scenes/SettingsMenu.tscn" id="4_settings"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_default"]
+
+[sub_resource type="Sky" id="Sky_default"]
+sky_material = SubResource("PanoramaSkyMaterial_default")
+
+[sub_resource type="Environment" id="Environment_default"]
+background_mode = 2
+sky = SubResource("Sky_default")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_loader")
+
+[node name="GameUILayers" type="Node" parent="."]
+script = ExtResource("8_ui")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_default")
+
+[node name="WeatherManager" type="Node3D" parent="."]
+script = ExtResource("2_weather")
+
+[node name="DayNightCycle" type="Node3D" parent="."]
+script = ExtResource("3_daynight")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SettingsMenu" parent="CanvasLayer" instance=ExtResource("4_settings")]

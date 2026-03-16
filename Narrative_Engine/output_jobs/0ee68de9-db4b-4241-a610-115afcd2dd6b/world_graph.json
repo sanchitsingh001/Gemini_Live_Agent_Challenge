@@ -1,0 +1,31 @@
+{
+  "center_area_id": "town_center",
+  "placements": [
+    {
+      "area_id": "waterfront",
+      "relative_to": "town_center",
+      "dir": "NE",
+      "dist_bucket": "near"
+    },
+    {
+      "area_id": "hallowed_grounds",
+      "relative_to": "waterfront",
+      "dir": "N",
+      "dist_bucket": "medium"
+    }
+  ],
+  "connections": [
+    {
+      "from_area_id": "town_center",
+      "to_area_id": "waterfront",
+      "kind": "road",
+      "distance": "medium"
+    },
+    {
+      "from_area_id": "waterfront",
+      "to_area_id": "hallowed_grounds",
+      "kind": "road",
+      "distance": "medium"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-f'
+      - 'pipeline_job/Dockerfile'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/narrative-repo/narrative-pipeline-job'
+      - '.'
+images:
+  - 'us-central1-docker.pkg.dev/${PROJECT_ID}/narrative-repo/narrative-pipeline-job'
+timeout: '1800s'

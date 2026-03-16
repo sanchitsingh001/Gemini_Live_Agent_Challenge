@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-f'
+      - 'pipeline_job/Dockerfile'
+      - '-t'
+      - 'us-central1-docker.pkg.dev/project-363d072c-3554-4f41-b1e/narrative-repo/narrative-pipeline-job'
+      - '.'
+
+images:
+  - 'us-central1-docker.pkg.dev/project-363d072c-3554-4f41-b1e/narrative-repo/narrative-pipeline-job'
+

@@ -1,0 +1,87 @@
+{
+  "default": {
+    "voice_name": "Zephyr",
+    "gender": "female",
+    "base_emotion": "neutral"
+  },
+  "kenji": {
+    "voice_name": "Charon",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "isao": {
+    "voice_name": "Algenib",
+    "gender": "male",
+    "base_emotion": "stern"
+  },
+  "takeda": {
+    "voice_name": "Fenrir",
+    "gender": "male",
+    "base_emotion": "stern"
+  },
+  "ryo": {
+    "voice_name": "Orus",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "chiyo": {
+    "voice_name": "Leda",
+    "gender": "female",
+    "base_emotion": "stern"
+  },
+  "hana": {
+    "voice_name": "Callirrhoe",
+    "gender": "female",
+    "base_emotion": "neutral"
+  },
+  "elara": {
+    "voice_name": "Zephyr",
+    "gender": "female",
+    "base_emotion": "neutral"
+  },
+  "lena": {
+    "voice_name": "Leda",
+    "gender": "female",
+    "base_emotion": "neutral"
+  },
+  "anya": {
+    "voice_name": "Callirrhoe",
+    "gender": "female",
+    "base_emotion": "neutral"
+  },
+  "bram": {
+    "voice_name": "Fenrir",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "kael": {
+    "voice_name": "Charon",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "gregor": {
+    "voice_name": "Algenib",
+    "gender": "male",
+    "base_emotion": "stern"
+  },
+  "markus": {
+    "voice_name": "Charon",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "bastian": {
+    "voice_name": "Fenrir",
+    "gender": "male",
+    "base_emotion": "stern"
+  },
+  "tomas": {
+    "voice_name": "Orus",
+    "gender": "male",
+    "base_emotion": "neutral"
+  },
+  "greta": {
+    "voice_name": "Callirrhoe",
+    "gender": "female",
+    "base_emotion": "neutral"
+  }
+}

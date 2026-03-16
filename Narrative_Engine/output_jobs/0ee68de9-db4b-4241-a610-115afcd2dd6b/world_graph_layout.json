@@ -1,0 +1,158 @@
+{
+  "areas": {
+    "town_center": {
+      "id": "town_center",
+      "name": "Town Center",
+      "scale_hint": "medium",
+      "size": 1.6,
+      "center": {
+        "x": -0.5565372915423582,
+        "y": 0.0
+      },
+      "rect": {
+        "x0": -1.3565372915423581,
+        "y0": -0.8,
+        "x1": 0.24346270845764184,
+        "y1": 0.8
+      },
+      "gates": [
+        {
+          "connected_to": "waterfront",
+          "kind": "road",
+          "distance": "medium",
+          "x": 0.24346270845764184,
+          "y": 0.11106707323017548
+        }
+      ]
+    },
+    "hallowed_grounds": {
+      "id": "hallowed_grounds",
+      "name": "Hallowed Grounds",
+      "scale_hint": "large",
+      "size": 2.1,
+      "center": {
+        "x": 0.5577199661906671,
+        "y": 2.8693178355367546
+      },
+      "rect": {
+        "x0": -0.49228003380933294,
+        "y0": 1.8193178355367545,
+        "x1": 1.6077199661906671,
+        "y1": 3.919317835536755
+      },
+      "gates": [
+        {
+          "connected_to": "waterfront",
+          "kind": "road",
+          "distance": "medium",
+          "x": 1.0459669777123626,
+          "y": 1.8193178355367545
+        }
+      ]
+    },
+    "waterfront": {
+      "id": "waterfront",
+      "name": "Waterfront",
+      "scale_hint": "large",
+      "size": 2.1,
+      "center": {
+        "x": 1.743462708457642,
+        "y": 0.3193178355367545
+      },
+      "rect": {
+        "x0": 0.6934627084576419,
+        "y0": -0.7306821644632455,
+        "x1": 2.7934627084576418,
+        "y1": 1.3693178355367546
+      },
+      "gates": [
+        {
+          "connected_to": "town_center",
+          "kind": "road",
+          "distance": "medium",
+          "x": 0.6934627084576419,
+          "y": 0.1735423019221492
+        },
+        {
+          "connected_to": "hallowed_grounds",
+          "kind": "road",
+          "distance": "medium",
+          "x": 1.2552156969359465,
+          "y": 1.3693178355367546
+        }
+      ]
+    }
+  },
+  "connections": [
+    {
+      "from": "town_center",
+      "to": "waterfront",
+      "kind": "road",
+      "distance": "medium",
+      "from_gate": {
+        "x": 0.24346270845764184,
+        "y": 0.11106707323017548
+      },
+      "to_gate": {
+        "x": 0.6934627084576419,
+        "y": 0.1735423019221492
+      },
+      "polyline": [
+        {
+          "x": 0.24346270845764184,
+          "y": 0.11106707323017548
+        },
+        {
+          "x": 0.6934627084576419,
+          "y": 0.1735423019221492
+        }
+      ]
+    },
+    {
+      "from": "hallowed_grounds",
+      "to": "waterfront",
+      "kind": "road",
+      "distance": "medium",
+      "from_gate": {
+        "x": 1.0459669777123626,
+        "y": 1.8193178355367545
+      },
+      "to_gate": {
+        "x": 1.2552156969359465,
+        "y": 1.3693178355367546
+      },
+      "polyline": [
+        {
+          "x": 1.0459669777123626,
+          "y": 1.8193178355367545
+        },
+        {
+          "x": 1.2552156969359465,
+          "y": 1.3693178355367546
+        }
+      ]
+    }
+  ],
+  "config": {
+    "DIST_UNITS": {
+      "near": 0.85,
+      "medium": 1.5,
+      "far": 2.2
+    },
+    "SCALE_SIZE": {
+      "tiny": 0.9,
+      "small": 1.2,
+      "medium": 1.6,
+      "large": 2.1,
+      "huge": 2.7
+    },
+    "min_gap_units": 0.35
+  },
+  "spawn_point": {
+    "area_id": "town_center",
+    "x": 0.24346270845764184,
+    "y": 0.11106707323017548,
+    "connected_to": "waterfront",
+    "kind": "road"
+  }
+}

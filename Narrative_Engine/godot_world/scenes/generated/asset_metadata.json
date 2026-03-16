@@ -1,0 +1,58 @@
+{
+  "Meshy_AI_japanese_building_0113061729_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_a_tree_0113061856_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_Frozen_Building_2_0113061643_texture": {
+    "front_yaw_deg": 180,
+    "front_panel": "C",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_Bench_0113061806_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_japanese_building_0113061745_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_building_0113014233_texture": {
+    "front_yaw_deg": null,
+    "front_panel": "C.",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_tree_0113061835_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  },
+  "Meshy_AI_Bird_Bench_0113061812_texture": {
+    "front_yaw_deg": 0,
+    "front_panel": "A",
+    "bbox_width": null,
+    "bbox_depth": null,
+    "bbox_height": null
+  }
+}

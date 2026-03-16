@@ -1,0 +1,9 @@
+.DS_Store
+.cursor/
+.firebase/
+venv/
+firebase_hosting/
+27a83acb-1b95-4e95-9afa-09321c78bae3/
+Narrative_Engine.zip
+Narrative_Engine/output/*/export/web/*.pck
+
