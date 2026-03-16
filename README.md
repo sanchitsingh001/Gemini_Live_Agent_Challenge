@@ -361,37 +361,6 @@ For a CDN-backed static hosting setup with a single URL per game:
 
 ---
 
-## Hackathon demo script (recommended flow)
-
-For the 4-minute demo, you can follow this script:
-
-1. **Problem & idea (talk, 30–45s)**  
-   Explain that designers want to go from story to immersive 3D worlds with live, multimodal narration and NPCs that can truly talk back.
-
-2. **Show the narrative UI / API (live, 30–45s)**  
-   - Submit a short story to `POST /generate` (via a small UI or `curl`) on the deployed `narrative-server`.  
-   - Show the `job_id` returned and then quickly switch to polling `GET /jobs/<job_id>` until it returns a `game_url`.
-
-3. **Open the generated game link (live, 90–120s)**  
-   - Open the returned web URL (Firebase Hosting or GCS+CDN).  
-   - Walk around the world (procedural layout).  
-   - Call out the sky, lighting, and key NPCs as being generated from the story.
-
-4. **Highlight multimodal output (live, 60–90s)**  
-   - Trigger voiceover narration (Gemini-TTS) and BGM (Lyria) in the game.  
-   - Talk to at least one NPC and show:
-     - Player text input (or button).
-     - Gemini-generated response.  
-     - Real-time TTS audio for that response (NPC speaking over the BGM).
-
-5. **Wrap with architecture (30–45s)**  
-   - Show the architecture diagram (also embedded below).  
-   - Briefly point at: Cloud Run (game + narrative), Cloud Run Job (pipeline), Vertex AI (Gemini, Imagen, TTS, Lyria), GCS, and Firebase Hosting.
-
-If you want judges to see pre-generated worlds quickly, you can also **directly open hosted games** built from example prompts (see “Example hosted games” below) before or after running `/generate` live.
-
----
-
 ## Hackathon submission checklist
 
 Use this as a quick checklist before you submit on Devpost:
