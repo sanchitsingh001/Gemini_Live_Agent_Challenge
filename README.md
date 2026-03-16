@@ -48,18 +48,7 @@ This aligns with the **Creative Storyteller** category by weaving text, images, 
 
 At a high level, the system looks like this:
 
-```mermaid
-flowchart LR
-  userBrowser["User Browser (Web Game)"] --> gameServer[GameServer_CloudRun]
-  gameServer --> geminiChat[Gemini_Live_TTS]
-
-  narrativeUI["Narrative UI / Dev Client"] --> narrativeServer[NarrativeServer_CloudRun]
-  narrativeServer --> cloudRunJob[PipelineJob_CloudRunJob]
-  cloudRunJob --> gcsBucket[GCS_Bucket_output_jobs]
-  cloudRunJob --> firebaseHosting[Firebase_Hosting_WebBuilds]
-
-  gcsBucket --> assetGeneratorPipeline[External_Asset_Generator_optional]
-```
+![System architecture diagram](GoogleHackathon.drawio.svg)
 
 - **User Browser (web game)**: Loads the exported Godot web build and calls the game server for dialogue.
 - **GameServer (Cloud Run, `game_server/`)**: FastAPI service that serves `game_bundle` (from local disk or GCS) and handles `/api/dialogue_turn` + `/api/chat` via Gemini (Live TTS for NPCs).
@@ -414,9 +403,6 @@ These are example worlds already exported and hosted on Firebase from the pipeli
   > At the center of the square, you realize the villagers were never warning you about the mystery—you were the final piece of it.
   - Hosted build: [`https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/`](https://project-363d072c-3554-4f41-b1e.web.app/20260316_031843-local/)
 
-Architecture diagram used for the submission:
-
-![System architecture diagram](GoogleHackathon.drawio.svg)
 
 ---
 
