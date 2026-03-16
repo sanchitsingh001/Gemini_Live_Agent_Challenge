@@ -16,8 +16,7 @@ This project is built for the **Gemini Live Agent Challenge – Creative Storyte
 - **Local setup & “hello world” run**
 - **Live game + NPC dialogue (local)**
 - **Cloud deployment & automation (Google Cloud)**
-- **Hackathon submission checklist**
-- **Advanced topics (assets & web hosting)**
+- **Image & Asset workflows**
 - **Environment variables**
 - **License**
 
