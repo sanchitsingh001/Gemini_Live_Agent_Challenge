@@ -369,37 +369,6 @@ For a CDN-backed static hosting setup with a single URL per game:
 
 ---
 
-## Hackathon submission checklist
-
-Use this as a quick checklist before you submit on Devpost:
-
-- **Code & README**
-  - Public GitHub repo with this README at `Narrative_Engine/`.
-  - `requirements.txt` and service-specific requirements checked in.
-  - No secrets or private keys committed (only example project IDs).
-- **Reproducible local run**
-  - `run_world_pipeline.sh` works with a small `story.txt`.
-  - Web build in `output/<timestamp>/export/web/` can be served locally.
-  - `run_game.sh --godot` works with `GAME_OUTPUT=output/<timestamp>`.
-- **Cloud deployment**
-  - `narrative-game-server` deployed on Cloud Run (URL noted).
-  - `narrative-server` deployed on Cloud Run with `PIPELINE_JOB_NAME` and `GCS_BUCKET` set.
-  - `narrative-pipeline-job` created as a Cloud Run Job and run at least once end-to-end.
-  - GCS bucket created and populated at `gs://${GCS_BUCKET}/output_jobs/<job_id>/`.
-  - (Optional) Firebase Hosting serving `/<job_id>/` game URLs.
-- **Proof of Google Cloud usage**
-  - Short screen recording showing:
-    - Cloud Run services and job running in the Google Cloud Console, and/or
-    - Logs for a `narrative-pipeline-job` execution.
-  - In the README / Devpost description, point to:
-    - `gemini_client.py` (Vertex usage),
-    - `generate_audio.py` (TTS + BGM),
-    - `game_server/main.py` (NPC dialogue endpoints),
-    - `pipeline_job/Dockerfile` + `pipeline_job` entrypoint (Cloud Run Job).
-- **Demo video**
-  - Follows (or is close to) the demo script above.
-  - Clearly shows multimodal behavior (text + images + audio) and cloud deployment.
-
 ## Image & Asset workflows
 
 ### Optional: batch images for image-to-3D workflows
